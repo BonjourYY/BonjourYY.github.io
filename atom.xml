@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bonjouryy.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-01-08T07:21:06.904Z</updated>
+    <updated>2021-01-08T07:33:19.675Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bonjouryy.github.io/"/>
     <link rel="self" href="https://bonjouryy.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://bonjouryy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[px、em、rem、vw、百分比的区别，你真的知道吗]]></title>
+        <title type="html"><![CDATA[px、em、rem、vw、百分比的区别，你真的知道吗？]]></title>
         <id>https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/</id>
         <link href="https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/">
         </link>
@@ -38,6 +38,7 @@
 <p>font-size: 200% 和font-size: 2em 一样，表示字体大小是默认（继承自父亲）字体大小的2倍。<br>
 line-height: 200% 表示行高是自己字体大小的2倍。<br>
 width: 100%在标准盒模型下表示自己content的宽度等于父亲content的宽度，在IE盒模型下，表示自己content+padding+border的宽度等于父亲content的宽度。</p>
+<br/>
 <p>题目: 下面代码中，body、article、p的实际字体大小分别是多少？</p>
 <ul>
 <li>A、body是32px， article是16px，p是32px</li>
@@ -69,6 +70,7 @@ width: 100%在标准盒模型下表示自己content的宽度等于父亲content�
 
 // 答案：B。html默认是16px，body是2em，是默认的2倍32px， article是32px，p是article的2倍64px。
 </code></pre>
+<br/>
 <p>题目: 以下代码中，p的width的实际值是多少？(单选)</p>
 <ul>
 <li>A、32px</li>
@@ -129,15 +131,6 @@ width: 100%在标准盒模型下表示自己content的宽度等于父亲content�
         <updated>2020-12-26T03:59:26.000Z</updated>
         <content type="html"><![CDATA[<p>文件名和文件夹名字用小写，单词之间的分割使用中划线，而不是下划线。<br>
 <img src="https://bonjouryy.github.io//post-images/1608955657477.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Test web]]></title>
-        <id>https://bonjouryy.github.io/post/test-web/</id>
-        <link href="https://bonjouryy.github.io/post/test-web/">
-        </link>
-        <updated>2020-12-09T05:41:41.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="这是一篇测试的文章">这是一篇测试的文章</h1>
 ]]></content>
     </entry>
     <entry>
