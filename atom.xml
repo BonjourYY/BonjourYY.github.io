@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bonjouryy.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-01-08T03:46:42.435Z</updated>
+    <updated>2021-01-08T07:21:06.904Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bonjouryy.github.io/"/>
     <link rel="self" href="https://bonjouryy.github.io/atom.xml"/>
@@ -10,6 +10,99 @@
     <logo>https://bonjouryy.github.io/images/avatar.png</logo>
     <icon>https://bonjouryy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[px、em、rem、vw、百分比的区别，你真的知道吗]]></title>
+        <id>https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/</id>
+        <link href="https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/">
+        </link>
+        <updated>2021-01-08T07:20:32.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>px</p>
+</blockquote>
+<p>px是固定单位，其他几种都是相对单位。当我们把电脑屏幕的分辨率调为1440*900时，css里面设置的1px实际的物理尺寸就是屏幕宽度的1/1440。也就是说，px的实际大小由电脑的屏幕分辨率决定。</p>
+<blockquote>
+<p>em</p>
+</blockquote>
+<p>默认字体大小的倍数，这里的默认字体大小指的是继承自父元素的字体大小。比如给p元素设置font-size:2em，那么我们先去找p元素的父元素的字体是多少，如果是16px，那么p元素就是32px。如果是20px，那么p元素就是40px。一级一级向上找，浏览器默认的字体大小是16px。当给元素设置width: 2em，这里的默认字体大小是该元素自身的实际字体大小。就不是父元素的字体大小了。</p>
+<blockquote>
+<p>rem</p>
+</blockquote>
+<p>根元素(html 节点)字体大小的倍数。比如给p元素设置font-size:2rem，那么我们直接看html节点设置的font-size的大小，从而算出p元素的字体大小。</p>
+<blockquote>
+<p>vw</p>
+</blockquote>
+<p>1vw 代表浏览器视口宽度的1%。</p>
+<blockquote>
+<p>1%</p>
+</blockquote>
+<p>font-size: 200% 和font-size: 2em 一样，表示字体大小是默认（继承自父亲）字体大小的2倍。<br>
+line-height: 200% 表示行高是自己字体大小的2倍。<br>
+width: 100%在标准盒模型下表示自己content的宽度等于父亲content的宽度，在IE盒模型下，表示自己content+padding+border的宽度等于父亲content的宽度。</p>
+<p>题目: 下面代码中，body、article、p的实际字体大小分别是多少？</p>
+<ul>
+<li>A、body是32px， article是16px，p是32px</li>
+<li>B、body是32px， article是32px，p是64px</li>
+<li>C、body是16px， article是16px，p是32px</li>
+<li>D、body是32px， article是32px，p是32px</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;em 演示&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;article&gt;
+      &lt;p&gt;hello 饥人谷&lt;/p&gt;
+    &lt;/article&gt;
+    
+    &lt;style&gt;
+      body{
+        font-size: 2em;
+      }
+      p {
+        font-size: 2em;
+      }
+&lt;/style&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+// 答案：B。html默认是16px，body是2em，是默认的2倍32px， article是32px，p是article的2倍64px。
+</code></pre>
+<p>题目: 以下代码中，p的width的实际值是多少？(单选)</p>
+<ul>
+<li>A、32px</li>
+<li>B、64px</li>
+<li>C、128px</li>
+<li>D、256px</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;em 演示&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;article&gt;
+      &lt;p&gt;hello 饥人谷&lt;/p&gt;
+    &lt;/article&gt;
+    
+    &lt;style&gt;
+      body{
+        font-size: 2em;
+      }
+      p {
+        font-size: 2em;
+        width: 2em;
+      }
+&lt;/style&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+// 答案：C。p的宽度是默认字号的2倍， 字号是64px。
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSS选择器优先级是怎样计算的？]]></title>
         <id>https://bonjouryy.github.io/post/css-xuan-ze-qi-you-xian-ji-shi-zen-yang-ji-suan-de/</id>

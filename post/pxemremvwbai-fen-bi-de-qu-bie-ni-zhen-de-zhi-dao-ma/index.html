@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Git基本操作指令 | Gridea</title>
+<title>px、em、rem、vw、百分比的区别，你真的知道吗 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1610090461788">
 
@@ -89,123 +89,100 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    Git基本操作指令
+                    px、em、rem、vw、百分比的区别，你真的知道吗
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-12-04 ·
+                        · 2021-01-08 ·
                     </time>
-                    
-                        <a href="https://bonjouryy.github.io/tag/0cPVL_BRW/" class="post-tags">
-                            # git
-                        </a>
                     
                 </div>
                 <div class="post-content">
                     <blockquote>
-<p>git init</p>
+<p>px</p>
 </blockquote>
-<p>首先，如果想要用git，需要先把项目变成git仓库。执行git init即可</p>
+<p>px是固定单位，其他几种都是相对单位。当我们把电脑屏幕的分辨率调为1440*900时，css里面设置的1px实际的物理尺寸就是屏幕宽度的1/1440。也就是说，px的实际大小由电脑的屏幕分辨率决定。</p>
 <blockquote>
-<p>git init test2</p>
+<p>em</p>
 </blockquote>
-<p>如果git init 后面加文件夹名，那么它会新建一个文件夹，并且把这个文件夹设置为git仓库。</p>
+<p>默认字体大小的倍数，这里的默认字体大小指的是继承自父元素的字体大小。比如给p元素设置font-size:2em，那么我们先去找p元素的父元素的字体是多少，如果是16px，那么p元素就是32px。如果是20px，那么p元素就是40px。一级一级向上找，浏览器默认的字体大小是16px。当给元素设置width: 2em，这里的默认字体大小是该元素自身的实际字体大小。就不是父元素的字体大小了。</p>
 <blockquote>
-<p>ls -la</p>
+<p>rem</p>
 </blockquote>
-<p>查看目录下的所有文件(包括隐藏文件)</p>
+<p>根元素(html 节点)字体大小的倍数。比如给p元素设置font-size:2rem，那么我们直接看html节点设置的font-size的大小，从而算出p元素的字体大小。</p>
 <blockquote>
-<p>ctrl + l</p>
+<p>vw</p>
 </blockquote>
-<p>清屏</p>
+<p>1vw 代表浏览器视口宽度的1%。</p>
 <blockquote>
-<p>git clone 地址</p>
+<p>1%</p>
 </blockquote>
-<p>从网上克隆仓库</p>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>查看仓库状态</p>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<p>将所有修改添加至暂存区</p>
-<blockquote>
-<p>git commit -m &quot;描述&quot;</p>
-</blockquote>
-<p>提交版本</p>
-<blockquote>
-<p>git log</p>
-</blockquote>
-<p>查看所有版本记录(查看总共记录了几次快照)</p>
-<blockquote>
-<p>git log -p</p>
-</blockquote>
-<p>查看的详细的版本记录</p>
-<blockquote>
-<p>git log --oneline</p>
-</blockquote>
-<p>以一行展示的形式查看版本记录</p>
-<blockquote>
-<p>git log --all</p>
-</blockquote>
-<p>查看所有版本记录</p>
-<blockquote>
-<p>git log --oneline --all --graph</p>
-</blockquote>
-<p>以图形化的形式一行展示所有的log记录</p>
-<blockquote>
-<p>git checkout xxx</p>
-</blockquote>
-<p>回退到指定的历史节点（回退到指定的快照，吃后悔药，xxx代表节点的身份证）</p>
-<blockquote>
-<p>git tag -a 标签名 -m '描述'</p>
-</blockquote>
-<p>附注标签（tag一般发布版本的时候使用）</p>
-<blockquote>
-<p>git tag</p>
-</blockquote>
-<p>查看标签</p>
-<blockquote>
-<p>git show 标签名</p>
-</blockquote>
-<p>查看某个标签的详细信息</p>
-<blockquote>
-<p>git checkout 标签名</p>
-</blockquote>
-<p>回溯至标签所在的提交</p>
-<blockquote>
-<p>git branch 分支名</p>
-</blockquote>
-<p>创建分支</p>
-<blockquote>
-<p>git checkout 分支名</p>
-</blockquote>
-<p>切换分支</p>
-<blockquote>
-<p>git checkout -b 分支名</p>
-</blockquote>
-<p>创建并切换至分支</p>
-<blockquote>
-<p>git merge 要合并的分支名</p>
-</blockquote>
-<p>合并分支</p>
-<blockquote>
-<p>git remote add 远程仓库 远程地址</p>
-</blockquote>
-<p>添加远程仓库</p>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
-<p>列出所有远程仓库的详细信息</p>
-<blockquote>
-<p>git push -u 远程名 分支名</p>
-</blockquote>
-<p>上传代码</p>
-<blockquote>
-<p>git clone 仓库地址</p>
-</blockquote>
-<p>克隆(拷贝)仓库</p>
+<p>font-size: 200% 和font-size: 2em 一样，表示字体大小是默认（继承自父亲）字体大小的2倍。<br>
+line-height: 200% 表示行高是自己字体大小的2倍。<br>
+width: 100%在标准盒模型下表示自己content的宽度等于父亲content的宽度，在IE盒模型下，表示自己content+padding+border的宽度等于父亲content的宽度。</p>
+<p>题目: 下面代码中，body、article、p的实际字体大小分别是多少？</p>
+<ul>
+<li>A、body是32px， article是16px，p是32px</li>
+<li>B、body是32px， article是32px，p是64px</li>
+<li>C、body是16px， article是16px，p是32px</li>
+<li>D、body是32px， article是32px，p是32px</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;em 演示&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;article&gt;
+      &lt;p&gt;hello 饥人谷&lt;/p&gt;
+    &lt;/article&gt;
+    
+    &lt;style&gt;
+      body{
+        font-size: 2em;
+      }
+      p {
+        font-size: 2em;
+      }
+&lt;/style&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+// 答案：B。html默认是16px，body是2em，是默认的2倍32px， article是32px，p是article的2倍64px。
+</code></pre>
+<p>题目: 以下代码中，p的width的实际值是多少？(单选)</p>
+<ul>
+<li>A、32px</li>
+<li>B、64px</li>
+<li>C、128px</li>
+<li>D、256px</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;em 演示&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;article&gt;
+      &lt;p&gt;hello 饥人谷&lt;/p&gt;
+    &lt;/article&gt;
+    
+    &lt;style&gt;
+      body{
+        font-size: 2em;
+      }
+      p {
+        font-size: 2em;
+        width: 2em;
+      }
+&lt;/style&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+// 答案：C。p的宽度是默认字号的2倍， 字号是64px。
+</code></pre>
 
                 </div>
             </article>
@@ -214,8 +191,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://bonjouryy.github.io/post/hello-gridea/" class="post-title gt-a-link">
-                    Hello Gridea
+                <a href="https://bonjouryy.github.io/post/css-xuan-ze-qi-you-xian-ji-shi-zen-yang-ji-suan-de/" class="post-title gt-a-link">
+                    CSS选择器优先级是怎样计算的？
                 </a>
             </div>
         
