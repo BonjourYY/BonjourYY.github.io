@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bonjouryy.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-01-08T07:35:04.720Z</updated>
+    <updated>2021-01-08T07:37:42.500Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bonjouryy.github.io/"/>
     <link rel="self" href="https://bonjouryy.github.io/atom.xml"/>
@@ -116,8 +116,8 @@ width: 100%在标准盒模型下表示自己content的宽度等于父亲content�
 <h2 id="2-权重计算">2、权重计算</h2>
 <p>千位：有行间属性该位得一分</p>
 <p>百位：有ID选择器该位得一分</p>
-<p>十位：有类选择器、属性选择器、伪类该位分别的一分</p>
-<p>个位：有标签选择器、伪元素选择器该位分别的一分</p>
+<p>十位：有类选择器、属性选择器、伪类该位分别得一分</p>
+<p>个位：有标签选择器、伪元素选择器该位分别得一分</p>
 <h2 id="3-举例">3、举例</h2>
 <p>#header p.content.active 得分为 0121</p>
 <p>.header p.active::before 得分为 0022</p>
