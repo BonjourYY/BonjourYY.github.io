@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bonjouryy.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-02-20T06:19:36.747Z</updated>
+    <updated>2021-02-20T06:39:26.054Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bonjouryy.github.io/"/>
     <link rel="self" href="https://bonjouryy.github.io/atom.xml"/>
@@ -124,12 +124,88 @@ width: 100%在标准盒模型下表示自己content的宽度等于父亲content�
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Gridea文章模板]]></title>
-        <id>https://bonjouryy.github.io/post/Gride/</id>
-        <link href="https://bonjouryy.github.io/post/Gride/">
+        <title type="html"><![CDATA[CSS3]]></title>
+        <id>https://bonjouryy.github.io/post/css3/</id>
+        <link href="https://bonjouryy.github.io/post/css3/">
         </link>
         <updated>2021-01-01T07:20:32.000Z</updated>
-        <content type="html"><![CDATA[<p>123</p>
+        <content type="html"><![CDATA[<h3 id="一-前缀">一、前缀</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">前缀</th>
+<th style="text-align:center">浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-webkit</td>
+<td style="text-align:center">chrome 和 safari</td>
+</tr>
+<tr>
+<td style="text-align:center">-moz</td>
+<td style="text-align:center">firefox</td>
+</tr>
+<tr>
+<td style="text-align:center">-ms</td>
+<td style="text-align:center">IE</td>
+</tr>
+<tr>
+<td style="text-align:center">-o</td>
+<td style="text-align:center">opera</td>
+</tr>
+</tbody>
+</table>
+<p>兼容性查询网站：http://css.doyoe.com/ https://caniuse.com/</p>
+<p>预处理器(pre-processor)：sass / less cssNext</p>
+<p>后处理器(post-processor)：autoprefixer</p>
+<h3 id="二-css-3-选择器">二、css 3 选择器</h3>
+<h4 id="relationship-selectors-关系系选择器">Relationship Selectors 关系系选择器</h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;p&gt;1&lt;/p&gt;
+  &lt;p&gt;2&lt;/p&gt;
+  &lt;p&gt;3&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>E + F 下一个满足条件的兄弟元素节点</p>
+<pre><code class="language-css">div + p {
+  background-color:red;
+}
+</code></pre>
+<p>E ~ F 下面所有满足条件的兄弟元素节点</p>
+<pre><code class="language-css">div + p {
+  background-color:red;
+}
+</code></pre>
+<h4 id="attribute-selectors-属性元素选择器">Attribute Selectors 属性元素选择器</h4>
+<p>E[attr~='val'] 选中带有attr属性，并且属性值是以 val 独立存在的元素。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div class='a'&gt;1&lt;/div&gt;
+ &lt;div class='aa abc'&gt;2&lt;/div&gt;
+ &lt;div class='a abc'&gt;3&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-css">div[class~='a']{
+  background-color:red;
+}
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5Cfanqinyang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210130194959966.png" alt="image-20210130194959966" loading="lazy"></figure>
+<p>E[attr | ='val'] 选中带有attr属性，并且属性值以 val 开头，或者 val- 开头的元素。</p>
 ]]></content>
     </entry>
     <entry>
@@ -252,38 +328,6 @@ width: 100%在标准盒模型下表示自己content的宽度等于父亲content�
 <p>git clone 仓库地址</p>
 </blockquote>
 <p>克隆(拷贝)仓库</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://bonjouryy.github.io/post/hello-gridea/</id>
-        <link href="https://bonjouryy.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>

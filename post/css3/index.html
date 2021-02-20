@@ -1,11 +1,10 @@
 <html>
-
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>友情链接 - Gridea</title>
+<title>CSS3 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1613803149801">
 
@@ -26,12 +25,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
-
 <body>
 <div class="main gt-bg-theme-color-first">
-        <div class="main-content">
-            <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -87,28 +85,117 @@
     </div>
 </nav>
 
-            <div class="post-container">
-                <div class="post-detail">
-                    <article>
-                        <!-- <div class="post-content-wrapper"> -->
-                            <div class="post-content">
-                                <div class="friends-desc">
-                                    
-                                </div>
-                                <h3 id="linklist">友链列表</h3>
-                                
-                                    
-                                
-                            </div>
-                        <!-- </div> -->
-                    </article>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    CSS3
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-01-01 ·
+                    </time>
+                    
                 </div>
-                
+                <div class="post-content">
+                    <h3 id="一-前缀">一、前缀</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">前缀</th>
+<th style="text-align:center">浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-webkit</td>
+<td style="text-align:center">chrome 和 safari</td>
+</tr>
+<tr>
+<td style="text-align:center">-moz</td>
+<td style="text-align:center">firefox</td>
+</tr>
+<tr>
+<td style="text-align:center">-ms</td>
+<td style="text-align:center">IE</td>
+</tr>
+<tr>
+<td style="text-align:center">-o</td>
+<td style="text-align:center">opera</td>
+</tr>
+</tbody>
+</table>
+<p>兼容性查询网站：http://css.doyoe.com/ https://caniuse.com/</p>
+<p>预处理器(pre-processor)：sass / less cssNext</p>
+<p>后处理器(post-processor)：autoprefixer</p>
+<h3 id="二-css-3-选择器">二、css 3 选择器</h3>
+<h4 id="relationship-selectors-关系系选择器">Relationship Selectors 关系系选择器</h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;p&gt;1&lt;/p&gt;
+  &lt;p&gt;2&lt;/p&gt;
+  &lt;p&gt;3&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>E + F 下一个满足条件的兄弟元素节点</p>
+<pre><code class="language-css">div + p {
+  background-color:red;
+}
+</code></pre>
+<p>E ~ F 下面所有满足条件的兄弟元素节点</p>
+<pre><code class="language-css">div + p {
+  background-color:red;
+}
+</code></pre>
+<h4 id="attribute-selectors-属性元素选择器">Attribute Selectors 属性元素选择器</h4>
+<p>E[attr~='val'] 选中带有attr属性，并且属性值是以 val 独立存在的元素。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div class='a'&gt;1&lt;/div&gt;
+ &lt;div class='aa abc'&gt;2&lt;/div&gt;
+ &lt;div class='a abc'&gt;3&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-css">div[class~='a']{
+  background-color:red;
+}
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5Cfanqinyang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210130194959966.png" alt="image-20210130194959966" loading="lazy"></figure>
+<p>E[attr | ='val'] 选中带有attr属性，并且属性值以 val 开头，或者 val- 开头的元素。</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/mdn-bi-ji/" class="post-title gt-a-link">
+                    MDN笔记
+                </a>
             </div>
+        
 
+        
 
+        
 
-            <div class="site-footer gt-c-content-color-first">
+        
+
+        <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">温故而知新</div>
     <div class="social-container">
         
@@ -138,8 +225,7 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-        </div>
     </div>
+</div>
 </body>
-
 </html>
