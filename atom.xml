@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bonjouryy.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-02-20T06:39:26.054Z</updated>
+    <updated>2021-02-22T15:36:21.911Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bonjouryy.github.io/"/>
     <link rel="self" href="https://bonjouryy.github.io/atom.xml"/>
@@ -10,6 +10,90 @@
     <logo>https://bonjouryy.github.io/images/avatar.png</logo>
     <icon>https://bonjouryy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[HTML5新特性-Canvas笔记]]></title>
+        <id>https://bonjouryy.github.io/post/HTML5新特性-Canvas笔记/</id>
+        <link href="https://bonjouryy.github.io/post/HTML5新特性-Canvas笔记/">
+        </link>
+        <updated>2021-02-21T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>Canvas在HTML5中是画板的意思，如果想要在HTML5中应用Canvas，则加入<code>&lt;canvas&gt;&lt;/canvas&gt;</code>即可</p>
+<p>1）利用canvas画矩形</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Canvas画板&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!--引入canvas画板需要设置过id、width、height,有时还需要设置border--&gt;
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;400px&quot; height=&quot;300px&quot;&gt;&lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;); //首先找到画板元素
+var ctx = c.getContext(&quot;2d&quot;); //根据画板元素得到对象，意思是寻找到笔
+ctx.fillStyle(&quot;#FF0000&quot;); //设置属性
+ctx.fillRect(0,0,200,150); //利用fillRect方法开始作图 四个参数分别是 fillRect(x,y,width,height)
+</code></pre>
+<p>2）利用canvas画线</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+ctx.moveTo(0,0); //设置开始坐标
+ctx.lineTo(200,150); //设置终点坐标
+ctx.stroke();
+</code></pre>
+<p>3）利用canvas画圆</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+ctx.beginPath();
+ctx.arc(200,150,80,0,Math.PI); //设置属性 五个参数分别是 圆心的x轴和y轴坐标、半径、开始弧度、终点弧度（弧度是顺时针旋转）
+</code></pre>
+<p>4）利用canvas绘制文本</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+ctx.font=&quot;30px Arial&quot; //设置字体的大小和样式
+ctx.fillText(&quot;Hello World&quot;,200,150) //字体文本，字体坐标
+</code></pre>
+<p>5）把图像放到canvas画板上</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+var img = document.getElementById(&quot;myimg&quot;); //myimg需要在html中添加
+ctx.drawImage(img,10,10); //图像名、图像坐标
+</code></pre>
+<p>6）在canvas画线性渐变和径向渐变</p>
+<p>这一点还没有学到，等学到了再来补充笔记。。。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HTTP入门笔记]]></title>
+        <id>https://bonjouryy.github.io/post/Untitled/</id>
+        <link href="https://bonjouryy.github.io/post/Untitled/">
+        </link>
+        <updated>2021-02-21T06:20:32.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="http协议">HTTP协议</h2>
+<p>Q：当我们在浏览器的地址栏输入URL时，背后发生了哪些事情？</p>
+<p>A：1）首先浏览器判断用户输入的URL是否是正确的，如果不是，则利用默认搜索引擎进行搜索。<br>
+2）如果是正确的，则先经过DNS服务器解析，DNS服务器解析的目的是把域名转换成IP地址。<br>
+3）寻找到IP地址后，开始向服务器发送HTTP请求，请求是一报文的形式发送出去的，报文的大小是有限制的，所以一般会把报文分割成很多个小的数据包依次发送。服务器接收到这些请求之后，再进行拼合。服务器根据请求知道客户端需要什么，再给浏览器发送HTTP响应，浏览器收到响应后，把页面渲染出来。</p>
+<figure data-type="image" tabindex="1"><img src="https://img-a.udemycdn.com/redactor/raw/2018-12-18_09-06-37-47212942a52fd50fb8075cb301d7c495.png?WuUjUbGR2CJ6iDW_B0J0He1crvbzDUFs8V1ta92MFrc9gPuPJNyzIEIdosG0L5Rs1yJVZli5xag-YLTnGoBsRqLZj3Oj2l-HLUaORZROe4TmvKWIeex8l1FlKj92ebumkFqw9-AHExgj0IRQWpVGN_7szgaql6JG8Bm2p7IVJrkzwAwG" alt="img" loading="lazy"></figure>
+<ul>
+<li>客服端浏览器主动发起一个HTTP request</li>
+<li>服务器接收到HTTP请求后，做出相应的逻辑处理</li>
+<li>服务器返回一个HTTP response</li>
+<li>浏览器接收到响应后，做出相应的逻辑处理</li>
+</ul>
+<h2 id="http-request-报文-和-http-response-报文-的组成">Http request 报文 和 Http response 报文 的组成</h2>
+<p>一个Htpp request报文包括：<br>
+请求方法 methods：GET、POST、PATCH 等<br>
+请求地址 URL<br>
+请求头 Headers：以键值对的形式存在，描述报文的基本信息<br>
+请求体 Body：报文的具体内容</p>
+<p>一个Http response报文包括：<br>
+状态码 Status code：200 404 等<br>
+响应头 Headers<br>
+响应体 Body</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[px、em、rem、vw、百分比的区别，你真的知道吗？]]></title>
         <id>https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/</id>

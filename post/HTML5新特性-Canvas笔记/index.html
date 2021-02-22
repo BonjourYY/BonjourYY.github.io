@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>CSS选择器优先级是怎样计算的？ | Gridea</title>
+<title>HTML5新特性-Canvas笔记 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1614008143178">
 
@@ -89,25 +89,65 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    CSS选择器优先级是怎样计算的？
+                    HTML5新特性-Canvas笔记
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-01-08 ·
+                        · 2021-02-22 ·
                     </time>
+                    
+                        <a href="https://bonjouryy.github.io/tag/W1OAM6Icf/" class="post-tags">
+                            # canvas
+                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <h2 id="1-口诀记忆">1、口诀记忆</h2>
-<p>选中且设置！important的 &gt; 权重高的 &gt; 权重相同位置靠后的 &gt; 来自继承的</p>
-<h2 id="2-权重计算">2、权重计算</h2>
-<p>千位：有行间属性该位得一分</p>
-<p>百位：有ID选择器该位得一分</p>
-<p>十位：有类选择器、属性选择器、伪类该位分别得一分</p>
-<p>个位：有标签选择器、伪元素选择器该位分别得一分</p>
-<h2 id="3-举例">3、举例</h2>
-<p>#header p.content.active 得分为 0121</p>
-<p>.header p.active::before 得分为 0022</p>
+                    <p>Canvas在HTML5中是画板的意思，如果想要在HTML5中应用Canvas，则加入<code>&lt;canvas&gt;&lt;/canvas&gt;</code>即可</p>
+<p>1）利用canvas画矩形</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Canvas画板&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!--引入canvas画板需要设置过id、width、height,有时还需要设置border--&gt;
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;400px&quot; height=&quot;300px&quot;&gt;&lt;/canvas&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;); //首先找到画板元素
+var ctx = c.getContext(&quot;2d&quot;); //根据画板元素得到对象，意思是寻找到笔
+ctx.fillStyle(&quot;#FF0000&quot;); //设置属性
+ctx.fillRect(0,0,200,150); //利用fillRect方法开始作图 四个参数分别是 fillRect(x,y,width,height)
+</code></pre>
+<p>2）利用canvas画线</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+ctx.moveTo(0,0); //设置开始坐标
+ctx.lineTo(200,150); //设置终点坐标
+ctx.stroke();
+</code></pre>
+<p>3）利用canvas画圆</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+ctx.beginPath();
+ctx.arc(200,150,80,0,Math.PI); //设置属性 五个参数分别是 圆心的x轴和y轴坐标、半径、开始弧度、终点弧度（弧度是顺时针旋转）
+</code></pre>
+<p>4）利用canvas绘制文本</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+ctx.font=&quot;30px Arial&quot; //设置字体的大小和样式
+ctx.fillText(&quot;Hello World&quot;,200,150) //字体文本，字体坐标
+</code></pre>
+<p>5）把图像放到canvas画板上</p>
+<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
+var ctx = c.getContext(&quot;2d&quot;);
+var img = document.getElementById(&quot;myimg&quot;); //myimg需要在html中添加
+ctx.drawImage(img,10,10); //图像名、图像坐标
+</code></pre>
+<p>6）在canvas画线性渐变和径向渐变</p>
+<p>这一点还没有学到，等学到了再来补充笔记。。。</p>
 
                 </div>
             </article>
@@ -116,8 +156,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://bonjouryy.github.io/post/css3/" class="post-title gt-a-link">
-                    CSS3
+                <a href="https://bonjouryy.github.io/post/Untitled/" class="post-title gt-a-link">
+                    HTTP入门笔记
                 </a>
             </div>
         

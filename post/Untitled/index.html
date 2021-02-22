@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>CSS选择器优先级是怎样计算的？ | Gridea</title>
+<title>HTTP入门笔记 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1614008143178">
 
@@ -89,25 +89,41 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    CSS选择器优先级是怎样计算的？
+                    HTTP入门笔记
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-01-08 ·
+                        · 2021-02-21 ·
                     </time>
+                    
+                        <a href="https://bonjouryy.github.io/tag/FUL01fKi8h/" class="post-tags">
+                            # HTML
+                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <h2 id="1-口诀记忆">1、口诀记忆</h2>
-<p>选中且设置！important的 &gt; 权重高的 &gt; 权重相同位置靠后的 &gt; 来自继承的</p>
-<h2 id="2-权重计算">2、权重计算</h2>
-<p>千位：有行间属性该位得一分</p>
-<p>百位：有ID选择器该位得一分</p>
-<p>十位：有类选择器、属性选择器、伪类该位分别得一分</p>
-<p>个位：有标签选择器、伪元素选择器该位分别得一分</p>
-<h2 id="3-举例">3、举例</h2>
-<p>#header p.content.active 得分为 0121</p>
-<p>.header p.active::before 得分为 0022</p>
+                    <h2 id="http协议">HTTP协议</h2>
+<p>Q：当我们在浏览器的地址栏输入URL时，背后发生了哪些事情？</p>
+<p>A：1）首先浏览器判断用户输入的URL是否是正确的，如果不是，则利用默认搜索引擎进行搜索。<br>
+2）如果是正确的，则先经过DNS服务器解析，DNS服务器解析的目的是把域名转换成IP地址。<br>
+3）寻找到IP地址后，开始向服务器发送HTTP请求，请求是一报文的形式发送出去的，报文的大小是有限制的，所以一般会把报文分割成很多个小的数据包依次发送。服务器接收到这些请求之后，再进行拼合。服务器根据请求知道客户端需要什么，再给浏览器发送HTTP响应，浏览器收到响应后，把页面渲染出来。</p>
+<figure data-type="image" tabindex="1"><img src="https://img-a.udemycdn.com/redactor/raw/2018-12-18_09-06-37-47212942a52fd50fb8075cb301d7c495.png?WuUjUbGR2CJ6iDW_B0J0He1crvbzDUFs8V1ta92MFrc9gPuPJNyzIEIdosG0L5Rs1yJVZli5xag-YLTnGoBsRqLZj3Oj2l-HLUaORZROe4TmvKWIeex8l1FlKj92ebumkFqw9-AHExgj0IRQWpVGN_7szgaql6JG8Bm2p7IVJrkzwAwG" alt="img" loading="lazy"></figure>
+<ul>
+<li>客服端浏览器主动发起一个HTTP request</li>
+<li>服务器接收到HTTP请求后，做出相应的逻辑处理</li>
+<li>服务器返回一个HTTP response</li>
+<li>浏览器接收到响应后，做出相应的逻辑处理</li>
+</ul>
+<h2 id="http-request-报文-和-http-response-报文-的组成">Http request 报文 和 Http response 报文 的组成</h2>
+<p>一个Htpp request报文包括：<br>
+请求方法 methods：GET、POST、PATCH 等<br>
+请求地址 URL<br>
+请求头 Headers：以键值对的形式存在，描述报文的基本信息<br>
+请求体 Body：报文的具体内容</p>
+<p>一个Http response报文包括：<br>
+状态码 Status code：200 404 等<br>
+响应头 Headers<br>
+响应体 Body</p>
 
                 </div>
             </article>
@@ -116,8 +132,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://bonjouryy.github.io/post/css3/" class="post-title gt-a-link">
-                    CSS3
+                <a href="https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/" class="post-title gt-a-link">
+                    px、em、rem、vw、百分比的区别，你真的知道吗？
                 </a>
             </div>
         
