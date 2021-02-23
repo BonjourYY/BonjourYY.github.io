@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>关于 | Gridea</title>
+<title>相邻选择器和兄弟选择器的区别 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1614056507495">
 
@@ -89,27 +89,77 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    关于
+                    相邻选择器和兄弟选择器的区别
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2019-01-25 ·
+                        · 2021-02-23 ·
                     </time>
+                    
+                        <a href="https://bonjouryy.github.io/tag/aWjfLS7pY/" class="post-tags">
+                            # css
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/y2_j6dB9M1/" class="post-tags">
+                            # 选择器
+                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+                    <h2 id="相邻选择器">相邻选择器</h2>
+<p>基本语法：A + B { }</p>
+<p>理解：选中A元素后面的 与A元素同级的 <code>一个</code> B元素</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;相邻选择器/兄弟选择器&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;style&gt;
+      div + p {
+        color:red; // 2 变红 3 不变红
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;p&gt;1&lt;/p&gt;&lt;/div&gt;
+    &lt;p&gt;2&lt;/p&gt;
+    &lt;p&gt;3&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="兄弟选择器">兄弟选择器</h2>
+<p>基本语法：A ~ B { }</p>
+<p>理解：选中A元素后面的 与A元素同级的 <code>所有</code> B元素</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;相邻选择器/兄弟选择器&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;style&gt;
+      div ~ p {
+        color:red; // 2 和 3 都会变红
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;p&gt;1&lt;/p&gt;&lt;/div&gt;
+    &lt;p&gt;2&lt;/p&gt;
+    &lt;p&gt;3&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
                 </div>
             </article>
         </div>
 
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/HTML5新特性-Canvas笔记/" class="post-title gt-a-link">
+                    HTML5新特性-Canvas笔记
+                </a>
+            </div>
         
 
         
