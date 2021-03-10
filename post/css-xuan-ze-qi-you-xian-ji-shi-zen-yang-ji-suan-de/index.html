@@ -6,7 +6,7 @@
 
 <title>CSS选择器优先级是怎样计算的？ | Gridea</title>
 
-<link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1614056507495">
+<link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615387709277">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://bonjouryy.github.io//styles/main.css">
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1614056507495" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1615387709277" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -100,6 +100,8 @@
                 <div class="post-content">
                     <h2 id="1-口诀记忆">1、口诀记忆</h2>
 <p>选中且设置！important的 &gt; 权重高的 &gt; 权重相同位置靠后的 &gt; 来自继承的</p>
+<p>行间样式 &gt; id选择器 &gt; 类选择器 = 伪类选择器 = 属性选择器 &gt; 标签选择器 = 伪元素选择器<br>
+1000              100                  10                   10                     10                       1                         1</p>
 <h2 id="2-权重计算">2、权重计算</h2>
 <p>千位：有行间属性该位得一分</p>
 <p>百位：有ID选择器该位得一分</p>

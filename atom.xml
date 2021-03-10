@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bonjouryy.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-02-23T05:03:00.546Z</updated>
+    <updated>2021-03-10T14:48:32.730Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bonjouryy.github.io/"/>
     <link rel="self" href="https://bonjouryy.github.io/atom.xml"/>
@@ -10,6 +10,37 @@
     <logo>https://bonjouryy.github.io/images/avatar.png</logo>
     <icon>https://bonjouryy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[css自定义属性(css变量)]]></title>
+        <id>https://bonjouryy.github.io/post/CSS自定义属性(CSS变量)/</id>
+        <link href="https://bonjouryy.github.io/post/CSS自定义属性(CSS变量)/">
+        </link>
+        <updated>2021-03-09T07:20:32.000Z</updated>
+        <content type="html"><![CDATA[<p>CSS自定义属性也叫CSS变量，用来在最开始的时候定义一个变量，然后可以在整个文档中都可以复用它。</p>
+<p>用法：定义变量 和 使用变量</p>
+<h2 id="定义变量">定义变量</h2>
+<p>变量名以 &quot;--&quot; 开头<br>
+例如</p>
+<pre><code class="language-css">element{
+  --main-bg-color:red;
+}
+</code></pre>
+<h2 id="使用变量">使用变量</h2>
+<p>直接用 var() 来引用变量名</p>
+<pre><code class="language-css">element{
+  background-color:var(--main-bg-color);
+}
+</code></pre>
+<h2 id="注意点来咯">注意点来咯！！！</h2>
+<p>CSS的自定义属性是有作用域的，例如上面的定义变量写在 element 这个选择器中，那么就只能在 element 中使用。所以为了能后在全局使用，我们一般提前在 :root 选择器中定义好。</p>
+<pre><code class="language-css">:root{
+  --main-bg-color:red;
+  --text-color:yellow;
+}
+</code></pre>
+<p>参考资料：https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[相邻选择器和兄弟选择器的区别]]></title>
         <id>https://bonjouryy.github.io/post/相邻选择器和兄弟选择器的区别/</id>
@@ -116,8 +147,8 @@ ctx.drawImage(img,10,10); //图像名、图像坐标
     </entry>
     <entry>
         <title type="html"><![CDATA[HTTP入门笔记]]></title>
-        <id>https://bonjouryy.github.io/post/Untitled/</id>
-        <link href="https://bonjouryy.github.io/post/Untitled/">
+        <id>https://bonjouryy.github.io/post/HTTP入门笔记/</id>
+        <link href="https://bonjouryy.github.io/post/HTTP入门笔记/">
         </link>
         <updated>2021-02-21T06:20:32.000Z</updated>
         <content type="html"><![CDATA[<h2 id="http协议">HTTP协议</h2>
@@ -247,6 +278,8 @@ width: 100%在标准盒模型下表示自己content的宽度等于父亲content�
         <updated>2021-01-08T03:45:00.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1-口诀记忆">1、口诀记忆</h2>
 <p>选中且设置！important的 &gt; 权重高的 &gt; 权重相同位置靠后的 &gt; 来自继承的</p>
+<p>行间样式 &gt; id选择器 &gt; 类选择器 = 伪类选择器 = 属性选择器 &gt; 标签选择器 = 伪元素选择器<br>
+1000              100                  10                   10                     10                       1                         1</p>
 <h2 id="2-权重计算">2、权重计算</h2>
 <p>千位：有行间属性该位得一分</p>
 <p>百位：有ID选择器该位得一分</p>

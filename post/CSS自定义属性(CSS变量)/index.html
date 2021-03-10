@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>HTML5新特性-Canvas笔记 | Gridea</title>
+<title>css自定义属性(css变量) | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615387709277">
 
@@ -89,65 +89,42 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    HTML5新特性-Canvas笔记
+                    css自定义属性(css变量)
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-02-22 ·
+                        · 2021-03-09 ·
                     </time>
                     
-                        <a href="https://bonjouryy.github.io/tag/W1OAM6Icf/" class="post-tags">
-                            # canvas
+                        <a href="https://bonjouryy.github.io/tag/aWjfLS7pY/" class="post-tags">
+                            # css
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>Canvas在HTML5中是画板的意思，如果想要在HTML5中应用Canvas，则加入<code>&lt;canvas&gt;&lt;/canvas&gt;</code>即可</p>
-<p>1）利用canvas画矩形</p>
-<pre><code class="language-html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Canvas画板&lt;/title&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!--引入canvas画板需要设置过id、width、height,有时还需要设置border--&gt;
-    &lt;canvas id=&quot;mycanvas&quot; width=&quot;400px&quot; height=&quot;300px&quot;&gt;&lt;/canvas&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+                    <p>CSS自定义属性也叫CSS变量，用来在最开始的时候定义一个变量，然后可以在整个文档中都可以复用它。</p>
+<p>用法：定义变量 和 使用变量</p>
+<h2 id="定义变量">定义变量</h2>
+<p>变量名以 &quot;--&quot; 开头<br>
+例如</p>
+<pre><code class="language-css">element{
+  --main-bg-color:red;
+}
 </code></pre>
-<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;); //首先找到画板元素
-var ctx = c.getContext(&quot;2d&quot;); //根据画板元素得到对象，意思是寻找到笔
-ctx.fillStyle(&quot;#FF0000&quot;); //设置属性
-ctx.fillRect(0,0,200,150); //利用fillRect方法开始作图 四个参数分别是 fillRect(x,y,width,height)
+<h2 id="使用变量">使用变量</h2>
+<p>直接用 var() 来引用变量名</p>
+<pre><code class="language-css">element{
+  background-color:var(--main-bg-color);
+}
 </code></pre>
-<p>2）利用canvas画线</p>
-<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
-var ctx = c.getContext(&quot;2d&quot;);
-ctx.moveTo(0,0); //设置开始坐标
-ctx.lineTo(200,150); //设置终点坐标
-ctx.stroke();
+<h2 id="注意点来咯">注意点来咯！！！</h2>
+<p>CSS的自定义属性是有作用域的，例如上面的定义变量写在 element 这个选择器中，那么就只能在 element 中使用。所以为了能后在全局使用，我们一般提前在 :root 选择器中定义好。</p>
+<pre><code class="language-css">:root{
+  --main-bg-color:red;
+  --text-color:yellow;
+}
 </code></pre>
-<p>3）利用canvas画圆</p>
-<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
-var ctx = c.getContext(&quot;2d&quot;);
-ctx.beginPath();
-ctx.arc(200,150,80,0,Math.PI); //设置属性 五个参数分别是 圆心的x轴和y轴坐标、半径、开始弧度、终点弧度（弧度是顺时针旋转）
-</code></pre>
-<p>4）利用canvas绘制文本</p>
-<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
-var ctx = c.getContext(&quot;2d&quot;);
-ctx.font=&quot;30px Arial&quot; //设置字体的大小和样式
-ctx.fillText(&quot;Hello World&quot;,200,150) //字体文本，字体坐标
-</code></pre>
-<p>5）把图像放到canvas画板上</p>
-<pre><code class="language-js">var c = document.getElementById(&quot;mycanvas&quot;);
-var ctx = c.getContext(&quot;2d&quot;);
-var img = document.getElementById(&quot;myimg&quot;); //myimg需要在html中添加
-ctx.drawImage(img,10,10); //图像名、图像坐标
-</code></pre>
-<p>6）在canvas画线性渐变和径向渐变</p>
-<p>这一点还没有学到，等学到了再来补充笔记。。。</p>
+<p>参考资料：https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties</p>
 
                 </div>
             </article>
@@ -156,8 +133,8 @@ ctx.drawImage(img,10,10); //图像名、图像坐标
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://bonjouryy.github.io/post/HTTP入门笔记/" class="post-title gt-a-link">
-                    HTTP入门笔记
+                <a href="https://bonjouryy.github.io/post/相邻选择器和兄弟选择器的区别/" class="post-title gt-a-link">
+                    相邻选择器和兄弟选择器的区别
                 </a>
             </div>
         
