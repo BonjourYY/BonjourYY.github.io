@@ -1,10 +1,10 @@
-<html lang="zh">
+<html>
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>关于 - Gridea</title>
+<title>代码初始化 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615726922379">
 
@@ -25,7 +25,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
@@ -86,18 +86,103 @@
 </nav>
 
     <div class="post-container">
-        <div class="post-detail">
+        <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
-                <div class="post-content">
+                <h2 class="post-title">
+                    代码初始化
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-02-11 ·
+                    </time>
                     
+                        <a href="https://bonjouryy.github.io/tag/kjlhuO8Z3I/" class="post-tags">
+                            # 代码
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>一、引入初始化css样式表<br>
+<a href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css</a></p>
+<p>二、两边留白布局</p>
+<pre><code class="language-css">.container{
+	max-width:&quot;1800px&quot;; 定义中间内容的宽度，这个一般是写死的。
+  margin:0 auto;
+  display:&quot;block&quot;;
+}
+</code></pre>
+<p>三、左右浮动布局</p>
+<pre><code class="language-css">.fl{
+	float:&quot;left&quot;;
+}
+.fr{
+	float:&quot;right&quot;;
+}
+</code></pre>
+<p>四、清除浮动</p>
+<pre><code class="language-css">.clear-float::after{
+	content:&quot;&quot;;
+  display:&quot;block&quot;;
+  clear:&quot;both&quot;;
+}
+</code></pre>
+<p>五、分割系统</p>
+<pre><code class="language-css">.colum-1{
+	float:&quot;left&quot;;
+  width:&quot;10%&quot;;
+}
+.colum-2{
+	float:&quot;left&quot;;
+  width:&quot;20%&quot;;
+}
+.colum-3{
+	float:&quot;left&quot;;
+  width:&quot;30%&quot;;
+}
+.colum-4{
+	float:&quot;left&quot;;
+  width:&quot;40%&quot;;
+}
+.colum-5{
+	float:&quot;left&quot;;
+  width:&quot;50%&quot;;
+}
+.colum-6{
+	float:&quot;left&quot;;
+  width:&quot;60%&quot;;
+}
+.colum-7{
+	float:&quot;left&quot;;
+  width:&quot;70%&quot;;
+}
+.colum-8{
+	float:&quot;left&quot;;
+  width:&quot;80%&quot;;
+}
+.colum-9{
+	float:&quot;left&quot;;
+  width:&quot;90%&quot;;
+}
+</code></pre>
+
                 </div>
             </article>
         </div>
-        <br>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/前端测试题/" class="post-title gt-a-link">
+                    前端测试题
+                </a>
+            </div>
         
 
         
 
+        
+
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">温故而知新</div>

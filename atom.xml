@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bonjouryy.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-03-14T10:29:32.038Z</updated>
+    <updated>2021-03-14T13:02:04.012Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bonjouryy.github.io/"/>
     <link rel="self" href="https://bonjouryy.github.io/atom.xml"/>
@@ -10,6 +10,732 @@
     <logo>https://bonjouryy.github.io/images/avatar.png</logo>
     <icon>https://bonjouryy.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[JavaScript复习（一）]]></title>
+        <id>https://bonjouryy.github.io/post/JavaScript复习（一）/</id>
+        <link href="https://bonjouryy.github.io/post/JavaScript复习（一）/">
+        </link>
+        <updated>2021-03-12T16:00:01.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-专业素养">一、专业素养</h1>
+<p>互联网历史第一个浏览器：Mosaic<br>
+浏览器组成：Shell部分 + 内核部分 （渲染引擎 JS引擎 其他模块）<br>
+2008年Google发布Chrome，Chrome采用优化后的JS引擎，代号“V8引擎”。</p>
+<p>人写的代码不能直接被计算机执行（计算机只认识“0和1”），所以需要经过翻译。翻译有两种方式：编译和解释</p>
+<p>编译：全部翻译完成，生产翻译文件，再执行翻译文件。<br>
+优点：快<br>
+不足：移植性不好，不能跨平台 C C++ Ruby</p>
+<p>解释：翻译一行，执行一行<br>
+优点：稍微慢<br>
+不足：跨平台 JavaScript php Python</p>
+<p>单线程与多线程（计算机的同步异步与生活相反）<br>
+单线程：一个执行体同一时间只能做一次事情 （同步）JavaScript是单线程的<br>
+多线程：一个执行体同时能干很多事情 （异步）</p>
+<h1 id="二-学习javascript">二、学习JavaScript</h1>
+<p>JavaScript特点：解释性、单线程<br>
+JS的三大部分：ECMAScript、DOM、BOM</p>
+<p>JS是如何执行的？采用轮转时间片的方式。<br>
+JS引擎把许多任务分成许多片段，依次传送执行，由于执行速度过快，所以看起来像是在一起执行的。</p>
+<h2 id="1引入js">（1）引入js</h2>
+<p>页面级引入：<head><script></script></head><br>
+外部引入：<script src=“xxx.js”></script> 一般写在body尾标签后面<br>
+如果既引入页面级，又引入外部。则外部优先级&gt;页面优先级</p>
+<h2 id="2基本语法">（2）基本语法</h2>
+<p>变量（variable），相当于一个筐，一个房间。<br>
+声明变量并赋值<br>
+var a；向系统申请一个房间（筐）---声明变量<br>
+a = 100；将100赋值到a里面去 ---变量赋值<br>
+var a = 100；---定义变量</p>
+<p>实际开发中，一般同时声明多个变量，并同时赋值。<br>
+var  a = 10，<br>
+b = 20，<br>
+c = 30，<br>
+d = 40，<br>
+e = 50；</p>
+<p>替换变量的值<br>
+var a = 10；<br>
+a =20；<br>
+变量名命名规则：1、变量名必须以英文字母、_、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">开</mi><mi mathvariant="normal">头</mi><mn>2</mn><mi mathvariant="normal">、</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">量</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">包</mi><mi mathvariant="normal">括</mi><mi mathvariant="normal">英</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">母</mi><msub><mi mathvariant="normal">、</mi><mi mathvariant="normal">、</mi></msub></mrow><annotation encoding="application/x-tex">开头
+2、变量名可以包括英文字母、_、</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">头</span><span class="mord">2</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">变</span><span class="mord cjk_fallback">量</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">包</span><span class="mord cjk_fallback">括</span><span class="mord cjk_fallback">英</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">母</span><span class="mord"><span class="mord cjk_fallback">、</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.15em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord cjk_fallback mtight">、</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>、数字<br>
+3、不可以用系统的关键字，保留字作为变量名<br>
+关键字：break、case、catch、continue、default、delete、do、else、finally、for、function、if、in、instanceof、new、return、switch、this、throw、try、typeof、var、void、while、with<br>
+保留字：abstract、boolean、byte、char、class、const、debugger、double、enum、export、extends、fimal、float、goto、implements、import、int、interface、long、mative、package、private、protected、public、short、static、super、synchronized、throws、transient、volatile<br>
+变量名网站：<a href="https://unbug.github.io/codelf/">https://unbug.github.io/codelf/</a></p>
+<p>书写格式要规范，“=”“+”“/”&quot;-&quot;两边都应该有一个空格<br>
+语句后面要用分号结束“；”</p>
+<pre><code class="language-javascript">//特例
+function test(){}
+for (){}
+if(){}
+</code></pre>
+<p>js语法错误会引发后续代码终止，但不会影响其他js代码块<br>
+错误分成两种<br>
+1、低级错误（语法解析错误）<br>
+2、逻辑错误（标准错误，情有可原）</p>
+<pre><code class="language-javascript">&lt;script&gt;
+  	var a = 10;
+		document.write(c);
+  &lt;/script&gt;
+&lt;script&gt;
+  	var b = 20;
+		document.write(b);
+  &lt;/script&gt;
+</code></pre>
+<h2 id="3数据类型由值决定类型">（3）数据类型——由值决定类型</h2>
+<p>数据类型分为 原始值 和 引用值</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原始值</th>
+<th style="text-align:center">Number</th>
+<th style="text-align:center">String</th>
+<th style="text-align:center">Boolean</th>
+<th style="text-align:center">underfined</th>
+<th style="text-align:center">null</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">数字</td>
+<td style="text-align:center">字符串</td>
+<td style="text-align:center">逻辑值（true/false）</td>
+<td style="text-align:center">变量未赋值</td>
+<td style="text-align:center">占位</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">引用值</td>
+<td style="text-align:center">arry</td>
+<td style="text-align:center">Object</td>
+<td style="text-align:center">function</td>
+<td style="text-align:center">...date</td>
+<td style="text-align:center">RegExp</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">数组</td>
+<td style="text-align:center">对象</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>申请变量赋值时，如果变量是原始值，那么系统记录的是值本身。如果变量是引用值，那么系统记录的是值的地址。<br>
+原始值赋值到原始值，拷贝的是值，所以改变原来的原始值，现在的不会改变。<br>
+引用值赋值到引用值，拷贝的是地址，所以改变原来的引用值，现在的也会跟着改变。</p>
+<h2 id="4运算操作符">（4）运算操作符</h2>
+<p>+： （1）数字运算<br>
+（2）字符串连接<br>
+注意：任何数据类型加字符串都等于字符串<br>
+减：-<br>
+乘：*<br>
+除：/<br>
+取余：%<br>
+赋值：=<br>
+括号：（）<br>
+加加：++（自身加1再赋值给自身）<br>
+减减：--（自身减1再赋值给自身）</p>
+<pre><code class="language-javascript">var a = 10;
+document.write(a++); 先输出a，再加加
+document.write(a);
+document.write(++a); 先加加，再输出a
+
+var a = 10;
+var b = ++a - 1 + a++;
+document.write(b + &quot; &quot; + a);
+
+var a = 10;
+a += 10; a加10，然后赋值给自身，相当于 a = a + 10;
+
+var a = 1：
+var b = a++ + 1：
+document.write(a);
+document.write(b); b=2 因为a++ 要先等这条语句执行完才会+1
+
+var a = 1；
+var b = a-- + --a;
+document.write(b); b=0 因为看到了--a,所以要先算--a这个运算，然后再算其他的
+doucment.write(a); a=-1
+
+var a = 1;
+var b = --a + --a;
+document.write(b);
+
+++ 放后面，等整条语句执行完，在+1的运算
+++ 放前面，先执行+1的那个运算，在执行整条语句
+其他 -- 同理
+</code></pre>
+<h2 id="5比较运算符">（5）比较运算符</h2>
+<p>大于：&gt;<br>
+小于：&lt;<br>
+等于等于：== 比较是否相等<br>
+大于等于：&gt;=<br>
+小于等于：&lt;=<br>
+叹号等于：！= 比较是否不相等<br>
+NaN不等于任何数，包括自己<br>
+比较结果boolean值，只能是 true（1） 或 false（0）<br>
+如果比较的是字符串，则比较的是字符串的ASCII顺序<br>
+<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1594739726523-632acf54-b394-47b8-af85-1ef958937caf.png#align=left&amp;display=inline&amp;height=633&amp;margin=%5Bobject%20Object%5D&amp;originHeight=633&amp;originWidth=972&amp;size=0&amp;status=done&amp;style=none&amp;width=972" alt="" loading="lazy"></p>
+<h2 id="6逻辑运算符">（6）逻辑运算符</h2>
+<p>与：&amp;&amp; 找假的表达式，并返回表达式的值，如果都为真，则返回最后表达式的值（返回的是表达式的值，并不是boolean值）<br>
+或：|| 找真的表达式，并返回表达式的值，如果都为假，则返回最后表达式的值（返回的是表达式的值，并不是boolean值）<br>
+非（取反）：！  先变成boolean值，然后取反。<br>
+被认为是false的值：underfined，null，NaN，“”（空字符串），0，false</p>
+<h2 id="7条件语句-if-else">（7）条件语句---if else</h2>
+<pre><code class="language-javascript">if(条件){语句}
+先把条件转换成boolean值，如果为true，则执行，为false则不执行。
+
+if(条件){语句}else if(){} 满足条件：条件具有互斥性
+
+if else 语句与 短路语句 类似
+if(1 &gt; 2){
+	document.write(&quot;a&quot;);
+}
+===&gt; 
+1 &gt; 2 &amp;&amp; document.write(&quot;a&quot;);
+</code></pre>
+<h2 id="8循环语句-for循环">（8）循环语句---for循环</h2>
+<pre><code class="language-javascript">for 循环
+for(var i = 0; i &lt; 10; i++) 
+{
+  document.write(i); //循环体
+}
+
+另一种写法
+var i = 0;
+for ( ; i &lt; 10 ; )
+  {
+    document.write(i);
+    i++;
+  }
+
+执行顺序：
+1、var i = 0 //定义变量
+2、if(i &lt; 10){document.write(i);} //判断
+3、i++  --&gt;  i=1
+4、if(i &lt; 10){document.write(i);}
+5、i++
+
+先执行一遍（1）
+判断（2）执行语句
+执行（3）
+注意：i++ 永远都是循环的最后一步。
+</code></pre>
+<h2 id="9while循环">（9）while循环</h2>
+<pre><code class="language-javascript">while 循环就是 for 循环的简化版
+while (i &lt; 10)
+{
+  document.write(i);
+  i++;
+}
+</code></pre>
+<h2 id="10do-while循环">（10）do while循环</h2>
+<pre><code class="language-javascript">do while 循环
+不管满不满足，先执行一次，在判断
+var i = 0;
+do
+{
+  document.write(&quot;a&quot;)
+  i++;
+}
+while(i &lt; 10)
+</code></pre>
+<h2 id="11switch-case语句">（11）switch case语句</h2>
+<pre><code class="language-javascript">var n = &quot;a&quot;/2/true;
+switch (n)
+{
+  case &quot;a&quot; : console.log(a);break;
+  case 2 : concole.log(b);break;
+  case true ：console.log(c);break;
+}
+注意：switch里面的写的是条件，case后面跟的是值。只要判断n的值等于&quot;a&quot;/2/true，就执行后面的代码。
+			如果不增加break，那面就会连带后面的语句一起输入，比如n=2时，就会打印出b和c。
+      break的作用：终止循环，需放在循环体里面。
+      continue：终止本次循环，进行下一次循环。
+</code></pre>
+<p>数组<br>
+声明数组：var arr = [1,2,3,&quot;fan&quot;,underfined];<br>
+数组的第一位是0开始的，因此取出数组里第一位的值 arr[0]; 最后一位的值 arr[arr.length - 1];<br>
+遍历数组通用方法</p>
+<pre><code class="language-javascript">for （var i = 0; i &lt; arr.length; i++）
+{
+	console.log(arr[i]);
+}
+</code></pre>
+<p>对象<br>
+声明对象 var obj = {name:&quot;fan&quot;, age:20}; 中间用逗号，最后用分号<br>
+取值：console.log(obj.name);<br>
+赋值：obj.name=&quot;deng&quot;;</p>
+<p>typeof()：告知你，数据是何种类型。</p>
+<pre><code class="language-javascript">var num = true;
+console.log(typeof(num));
+</code></pre>
+<p>typeof()可以返回的值：number string boolean object underfined function</p>
+<p>类型转换<br>
+1、显示类型转换<br>
+Number()：将括号里的值转换为数值类型，不能转的用NaN代替。最后的都是数值类型。<br>
+parseInt()：转换成整数。没有小数点。不能转的用NaN代替。</p>
+<pre><code class="language-javascript">var demo = &quot;b&quot;;
+var num = parseInt(demo); //把b转换成整数 NaN
+var num = parseInt(demo,16); //把b当做16进制转换成10进制
+</code></pre>
+<p>parseFloat()：转换成浮点类型，不能转的用NaN代替。<br>
+toString()  ===&gt;   demo.toString  underfined和null不能用toString</p>
+<pre><code class="language-javascript">var demo = 1010101010;
+var num = demo.toString(16); //把demo转换成16进制。
+</code></pre>
+<pre><code class="language-javascript">10000 转换成 16 进制
+先由2进制转成10进制，在转成16进制
+var num = 10000;
+var test = parseInt(num,2);
+console.log(test.toString(16));
+</code></pre>
+<p>String()：转换成字符串<br>
+Boolean()：转换成布尔类型</p>
+<p>2、隐式类型转换<br>
+isNaN(&quot;abc&quot;)    判断参数是否是NaN   Number(&quot;abc&quot;) ---&gt; NaN<br>
+++/-- +/-     ---&gt;  Number()</p>
+<pre><code class="language-javascript">var a = &quot;abc&quot;;
+a++; 先把a转换为number形式再加加 --&gt;  Number(a)
+a--; 同上
++a; 调用的也是Number 正号
+-a; 调用的也是Number 负号
+</code></pre>
+<p>+(&quot;加号&quot;)     ---&gt;    String()<br>
+-*/%      ---&gt;    Number()<br>
+&amp;&amp; || !    ---&gt;   Boolean()<br>
+&lt; &gt; &lt;= &gt;=    ---&gt;    Number()<br>
+== !=</p>
+<p>3.不发生类型转换<br>
+===    ！==</p>
+<p>NaN不等于任何数，包括自己。</p>
+<pre><code class="language-javascript">当变量没有被定义在控制台输出时，有且仅有一种情况不会报错。
+console.log(typeof(a));
+console.log(typeof(typeof(a)));   //返回的是String
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript复习（二）]]></title>
+        <id>https://bonjouryy.github.io/post/JavaScript复习（二）/</id>
+        <link href="https://bonjouryy.github.io/post/JavaScript复习（二）/">
+        </link>
+        <updated>2021-03-12T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="三-函数">三、函数</h1>
+<h2 id="1定义">（1）定义</h2>
+<p>一系列代码语句的集合</p>
+<h2 id="2声明函数">（2）声明函数</h2>
+<p>function test () {}<br>
+函数名命名原则：小驼峰原则，多个单词拼接时，第一个单词首字母小写，其余单词首字母大写。</p>
+<h2 id="3调用函数">（3）调用函数</h2>
+<p>test ();   ---&gt;   可执行多次</p>
+<h2 id="4函数表达式">（4）函数表达式</h2>
+<h3 id="1-命名函数表达式">1、命名函数表达式</h3>
+<p>var test = function test () {}</p>
+<h3 id="2-匿名函数表达式">2、匿名函数表达式</h3>
+<p>var demo = function () {}</p>
+<h2 id="5函数参数">（5）函数参数</h2>
+<pre><code class="language-javascript">function test(a , b)
+{
+  // var a,
+  // var b;
+  // test(a , b) 就相当于在函数体里面 var a; var b; 然后在调用函数的时候，将实际值传给a 和 b;
+	var c = a + b;
+}
+test(1 , 2);
+
+a b 是形参，1 2 是实参。
+</code></pre>
+<pre><code class="language-javascript">function test (a)
+{
+	// arguments -- [1, 2, 3, 4] 实参列表 这个列表是隐藏的。
+  console.log(arguments);  可直接输出数组
+  console.log(test.length);
+}
+test (1 , 2 , 3 , 4);
+</code></pre>
+<p>举例说明如下</p>
+<pre><code class="language-javascript">function test (a , b , c , d)
+{
+	if(test.length &gt; arguments.length)
+  {
+  	console.log(&quot;形参多了&quot;);
+  }else if(tese.length &lt; arguments.length)
+  {
+  	console.log(&quot;实参多了&quot;);
+  }else 
+  {
+  	console.log(&quot;相等&quot;);
+  }
+}
+test (1 , 2);
+</code></pre>
+<pre><code class="language-javascript">function test (a , b)
+{
+	// var a = 1;
+  a = 2;
+  console.log(arguments[0]);  // 输出 2  当形参和实参相等时，arguments[i]与形参的第 i+1 位存在映射关系。
+  											      //         当形参的 i+1 位和实参的 arguments[i] 位不对应时，则不存在。
+}
+test (1 , 2);
+</code></pre>
+<p>return的作用：1、终止函数<br>
+2、用变量接受函数的返回值（把值返回到函数外部） var a = Test();<br>
+3、retuen只能写在函数体里面</p>
+<pre><code class="language-javascript">function myNumber(target)
+{
+	return +target;
+}
+var num = myNumber(&quot;123&quot;);
+</code></pre>
+<h2 id="6函数作用域">（6）函数作用域</h2>
+<p>全局变量：在script标签里定义的变量<br>
+局部变量：在函数里面定义的变量<br>
+在函数里面可以访问在外面定义的全局变量（嵌套函数也适用），函数外无法访问函数里面的变量。彼此独立的函数不可以相互访问。儿子可以向爸爸、爷爷要钱。但爸爸和爷爷不可以向儿子要钱。</p>
+<h2 id="7递归">（7）递归</h2>
+<p>注意点：1、找规律 2、找出口（用已知条件找出口）</p>
+<h2 id="9预编译">（9）预编译</h2>
+<p>JS执行三部曲：</p>
+<ol>
+<li>语法分析</li>
+<li>预编译  ---&gt; 变量提升</li>
+<li>解释执行</li>
+</ol>
+<p>函数预编译五部曲：预编译发生函数执行的前一刻</p>
+<ol>
+<li>函数声明整体提升，定义变量 声明部分提升，赋值部分不提升。</li>
+<li>创建AO对象 Activation Object（执行期上下文）</li>
+<li>找形参和变量声明，将变量声明的名和形参名作为AO属性名，值为underfined</li>
+<li>将实参值和形参统一</li>
+<li>在函数体里面找函数声明，把函数声明的名作为属性名放到AO对象中，值变成相应的函数体</li>
+</ol>
+<p>全局预编译四步曲：</p>
+<ol>
+<li>函数声明整体提升，定义变量 声明部分提升，赋值部分不提升。</li>
+<li>创建GO对象</li>
+<li>找变量声明，将变量声明的名作为GO的属性名，值为underfined</li>
+<li>找函数声明，把函数声明的名作为属性名放到GO对象中，值变成相应的函数体</li>
+</ol>
+<p>imply global 暗示全局变量：即任何变量，如果变量未经声明就赋值，此变量就为全局对象（window）所有。<br>
+a = 10; ---&gt; window.a = 10;<br>
+一切声明的全局变量，全是window的属性。<br>
+var a = 10; ---&gt; window.a = 10;<br>
+window就是全局的域。</p>
+<h2 id="10作用域链">（10）作用域链</h2>
+<h2 id="11对象">（11）对象</h2>
+<pre><code class="language-javascript">var mrDeng = {
+	name:&quot;MrDeng&quot;,
+  age:40,
+  sex:&quot;male&quot;,
+  smoke:function(){
+    console.log(&quot;I am smoking!&quot;);
+    this.health --; //此处一般不用mrDeng，用this（调用属性时，前面必须写对象）
+  },
+  drink:function(){
+    console.log(&quot;I am drink&quot;);
+    this.health ++; //此处一般不用mrDeng，用this（调用属性时，前面必须写对象）
+  },
+} //创建对象
+
+属性的增删改查
+mrDeng.wife = &quot;xiaoliu&quot;; //增加 &amp;&amp; 修改
+mrDeng.wife; //查询
+delete mrDeng.sex; //删除
+
+对象的属性没有赋值时，将返回undefined;
+对象的属性值为函数时，称之为函数的方法。并且可以支持传参，return
+
+----------------------------------------------------------------------
+
+对象的创建方法
+1、var obj = {} //plainObject 对象字面量/对象直接量
+2、构造函数 --- 必须要有 new 才行
+			 1）系统自带的构造函数
+       Object() / Number() / Array() ...
+       var obj = new Object();
+			 obj.name = 'abc';
+			 obj.sex = 'male';
+       2）自定义构造函数 --- 命名需采用大驼峰原则：所有单词大字母大写
+       function Car(color){
+       	this.name = 'BMW',
+        this.height = '1400',
+       	this.lang = '4900',
+        this.run = function(){
+        	this.health --;
+        },
+  			this.color = color,
+       }
+			 var car1 = new Car('red');
+       
+构造函数内部原理
+1、在函数体最前面隐式的加上this={};
+2、执行this.xxx = xxx;
+3、隐式的返回this;
+         
+function Person (name,height){
+	// var this();
+  this.name = name,
+  this.height = height,
+  this.say = function (){
+  	console.log(this.say);
+  },
+    return 123; //如果这边写返回的是原始值，那么无效
+    return {}; //如果这边写返回的是空对象，则返回空对象
+  // return this;
+}
+    var person1 = new Person('xiaowang',180);
+    var person2 = new Person('xiaozhang',175);
+
+
+         
+
+</code></pre>
+<h2 id="12包装类">（12）包装类</h2>
+<p>原始值是没有属性和方法的，只有对象才有。但是原始值可以利用构造函数将其变成对象。</p>
+<pre><code class="language-javascript">var num = new Number(123); //此时num就是一个对象，可以给它增加属性 数字类型的对象
+var str = new String('abcd'); // 字符串类型的对象
+var bol = new Boolean('true'); // 布尔类型的对象
+
+// 包装类
+var num = 4;
+num.len = 3;
+// 原始值本身是没有属性的，但是如果这样写；系统就会 new Number(4).len = 3 ，把3放进去 然后销毁 delete
+console.log(num.len); //undefined
+// 接着当我需要访问num.len,因为之前已经销毁了，所以又会新建一个 new Number(4).len ,所以会返回undefined
+</code></pre>
+<h2 id="13原型">（13）原型</h2>
+<p>1、定义：原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过该改造函数产生的对象，可以继承该原型的属性和方法。</p>
+<pre><code class="language-javascript">function Person(){ //定义构造函数
+  this.name = 'fan';
+  this.age = 20;
+}
+// 当定义一个构造函数后，默认会产生Person.prototype={}
+Person.prototype.name = 'hehe'; //增加属性，通过Person()这个构造函数制造出的对象默认会继承此属性。
+var person = new Person();
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+
+// 一个对象的属性可以有自己的，也可以有 由原型那继承来的。
+</code></pre>
+<p>2、利用原型特点和概念，可以提取共有属性。</p>
+<pre><code class="language-javascript">Car.prototype.carName = 'BMW';
+Car.prototype.height = 1400;
+function Car (color,owner){
+	this.owner = owner;
+  this.color = color;
+}
+var car = new Car('red','ji');
+var car = new Car('green','deng');
+
+----------------------------------------------------------------------------
+
+原型属性的增删改查
+Car.prototype.xxx = '';
+car.xxx = ''; //这种方法是不行的
+delete Car.prototype.xxx;
+delete car.xxx; //这种方法是不行的
+
+Person.prototype = {
+	name:xxx,
+  age:xxx,
+  wife:xxx,
+} // 原型添加属性也可以是这种写法
+</code></pre>
+<p>3、对象如何查看原型 --&gt; 隐式属性 --&gt; <em>proto</em></p>
+<pre><code class="language-javascript">function Person(){
+	// var this ={__proto__:Person.prototype,} //三段式
+}
+var person = new Person();
+function obj = {
+	name : 'sunny'
+}
+person.__proto__ = obj; //可以更改对象的__proto__属性指向
+</code></pre>
+<p>4、对象如何查看对象的构造函数 --&gt; constructor</p>
+<pre><code class="language-javascript">prototype.constructor; //这个属性里面是构造这个对象的构造函数
+function Car(){};
+var car = new Car();
+car.constructor; // return function Car(){};
+</code></pre>
+<h2 id="14原型链">（14）原型链</h2>
+<pre><code class="language-javascript">Grand.prototype.lastName = &quot;Deng&quot;;
+function Grand() {}
+var grand = new Grand();
+Father.prototype = grand; //将Father的原型链指向grand对象
+function Father() {
+  this.name = &quot;xuming&quot;;
+}
+var father = new Father();
+Son.prototype = father; //将Son的原型链指向father对象
+function Son() {
+  this.hobbit = &quot;smoke&quot;;
+}
+var son = new Son();
+console.log(son.lastName); //Deng 原型链的应用
+console.log(son.toString()); //返回的是 Object.__proto__的toString()方法
+
+// 原型链的连接点为 __proto__
+// 原型的终端为 Object.__proto__
+</code></pre>
+<h2 id="15命名空间">（15）命名空间</h2>
+<p>目的：解决多人开发时变量命名冲突的问题<br>
+变量私有化，不会污染全局变量</p>
+<pre><code class="language-javascript">var name = 123;
+var initDeng = (function(){ //立即执行函数
+	var name = 456;
+	function callName(){
+	console.log(name);
+}
+	return function(){
+	callName();
+}
+}())
+initDeng() //456,而不是123
+</code></pre>
+<h2 id="16对象的枚举遍历">（16）对象的枚举（遍历）</h2>
+<p>枚举：enumeration</p>
+<pre><code class="language-javascript">var obj = {
+        name: &quot;fan&quot;,
+        age: 20,
+        sex: &quot;male&quot;,
+      }; //定义对象
+
+遍历对象的通用方法：for in 循环
+for (var key in obj){ //key里面存放的是各个属性的值，为String类型
+	console.log(key) //依次输出obj的属性值
+  console.log(obj.key) //不能这么写，obj.key --&gt; obj[&quot;key&quot;] 而obj没有key这个属性
+  console.log(obj[key]) //需要这么写才可以
+}
+
+一般情况下，如果存在原型链，for in 循环会把原型链的属性也打印出来（但不包括Object.prototype）
+所以我们需要在循环之前，先用hasOwnProperty方法判断是否是自己的属性
+var obj = {
+        name: &quot;fan&quot;,
+        age: 20,
+        sex: &quot;male&quot;,
+      }; //定义对象
+obj.__proto__ = {lastName:&quot;fan&quot;};
+for (var key in obj){
+	if(obj.hasOwnProperty(key)){ //判断属性是否是自己的属性，如果是则打印，不是则不打印
+  console.log(obj[key]);
+  }
+}
+
+in方法与hasOwnProperty方法的区别
+共同点：不管调用哪个方法,返回的都是Boolean值
+in：判断对象上面能不能访问到这个熟悉  obj.in(name) //判断obj能不能访问到name属性
+hasOwnProperty方法：判断是否是自己本身的属性 obj.hasOwnProperty(name) //判断是否是自己本身的属性，而并非是原型的
+
+instanceof操作符讲解（返回的是Boolean值）
+A instanceof B
+//官方定义：A对象是不是B构造函数构造出来的
+//老成定义：A对象的原型链上有没有B的原型（B.prototype）
+
+区别一个变量是数组还是对象的三种方法
+var demo = arr || object
+1、constructer
+2、instanceof
+3、toString
+</code></pre>
+<h2 id="17this指向">（17）this指向</h2>
+<p>函数预编译过程 this ---&gt; window      AO<br>
+全局作用域里 this ---&gt; window          GO<br>
+call/apply 可以改变函数运行时的this指向<br>
+obj.function(); function()里面的this指向obj</p>
+<pre><code class="language-javascript">var name = &quot;222&quot;;
+var a = {
+	name:&quot;1111&quot;,
+  say:function(){
+  	console.log(this.name)
+  }
+}
+var fun = a.say;
+fun();
+a.say();
+var b ={
+	name:&quot;333&quot;,
+	say:function(fun){
+  fun();
+  }
+}
+b.say(a.say);
+b.say = a.say;
+b.say();
+</code></pre>
+<h2 id="18arguments">（18）arguments</h2>
+<p>首先，需要明确一个定义，arguments只有两个方法 arguments.callee / arguments.length<br>
+1、arguments.callee    一般用于立即执行函数</p>
+<pre><code class="language-javascript">var num = (function (n) {
+	if(n==1){
+  	return 1
+  }
+  return n * arguments.callee(n - 1);
+} (100))
+</code></pre>
+<p>2、caller是函数的属性</p>
+<pre><code class="language-javascript">function test(){
+	demo();
+}
+function demo(){
+	demo.caller; //test 返回的是调用demo方法的那个环境
+}
+test();
+</code></pre>
+<h2 id="19克隆">（19）克隆</h2>
+<p>1、浅层克隆<br>
+2、深度克隆</p>
+<pre><code class="language-javascript">var obj = {
+	name:&quot;abc&quot;,
+  age:123,
+  card:[&quot;visa&quot;,&quot;master&quot;],
+  wife:{
+  	name:&quot;bcd&quot;,
+    son:{
+    	name:&quot;aaa&quot;
+    }
+  }
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于CSS伪类选择器 _first-child 的坑]]></title>
+        <id>https://bonjouryy.github.io/post/关于CSS伪类选择器 _first-child 的坑/</id>
+        <link href="https://bonjouryy.github.io/post/关于CSS伪类选择器 _first-child 的坑/">
+        </link>
+        <updated>2021-03-10T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>p:first-child 寻找p元素的父元素下面的第一个p元素<br>
+首先，寻找到第一个元素时，判断第一个元素是不是p元素，如果是，则改变，反之不改变。</p>
+<p>CSS代码</p>
+<pre><code class="language-css">p{
+	font-size:100px;
+  color:orange;
+}
+</code></pre>
+<p>HTML代码</p>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;p&gt;123&lt;/p&gt; //这种就会正常渲染
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;span&gt;123&lt;/span&gt;
+  &lt;p&gt;123&lt;/p&gt; //这种就不会正常渲染
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>注意 :nth-child() 同理</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[css自定义属性(css变量)]]></title>
         <id>https://bonjouryy.github.io/post/CSS自定义属性(CSS变量)/</id>
@@ -39,6 +765,51 @@
 }
 </code></pre>
 <p>参考资料：https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[用SSH工具XShell连接谷歌云 root用户或普通用户]]></title>
+        <id>https://bonjouryy.github.io/post/用SSH工具XShell连接谷歌云 root用户或普通用户/</id>
+        <link href="https://bonjouryy.github.io/post/用SSH工具XShell连接谷歌云 root用户或普通用户/">
+        </link>
+        <updated>2021-02-28T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="目录">目录</h1>
+<p>1.以root用户登入<br>
+2.普通用户，秘钥登入</p>
+<h2 id="1用root用户登入">1.用root用户登入</h2>
+<h3 id="11进入谷歌云实例面板">1.1.进入谷歌云实例面板</h3>
+<figure data-type="image" tabindex="1"><img src="https://cdn.nlark.com/yuque/0/2020/jpeg/1353789/1591633000851-7ea4a15e-cec1-4e70-95cb-4002db1d5a0e.jpeg#align=left&amp;display=inline&amp;height=291&amp;margin=%5Bobject%20Object%5D&amp;originHeight=399&amp;originWidth=1024&amp;size=0&amp;status=done&amp;style=none&amp;width=746" alt="" loading="lazy"></figure>
+<h3 id="12切换到root角色">1.2.切换到root角色</h3>
+<pre><code class="language-nginx">sudo -i
+</code></pre>
+<h3 id="13修改ssh配置文件etcsshsshd_config">1.3.修改SSH配置文件/etc/ssh/sshd_config</h3>
+<pre><code class="language-nginx">vi /etc/ssh/sshd_config
+</code></pre>
+<p><strong>修改PermitRootLogin和PasswordAuthentication为yes</strong></p>
+<pre><code class="language-nginx"># Authentication:
+PermitRootLogin yes //默认为no，需要开启root用户访问改为yes
+# Change to no to disable tunnelled clear text passwords
+PasswordAuthentication yes //默认为no，改为yes开启密码登陆
+</code></pre>
+<h3 id="14给root用户设置密码">1.4.给root用户设置密码</h3>
+<pre><code class="language-nginx">passwd root
+</code></pre>
+<h3 id="15重启ssh服务使修改生效">1.5.重启SSH服务使修改生效</h3>
+<pre><code class="language-nginx">/etc/init.d/ssh restart
+</code></pre>
+<h3 id="16登录">1.6.登录</h3>
+<p>在xshell中，直接使用root账号密码登录。</p>
+<h2 id="2新建普通用户登入">2.新建普通用户登入</h2>
+<h3 id="21-本地用xshell生成密秘钥">2.1. 本地用xshell生成密秘钥</h3>
+<h3 id=""><img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591633946723-aa6aa453-4a4f-4a14-a763-fd7b8f727a0f.png#align=left&amp;display=inline&amp;height=540&amp;margin=%5Bobject%20Object%5D&amp;originHeight=780&amp;originWidth=1078&amp;size=0&amp;status=done&amp;style=none&amp;width=746" alt="" loading="lazy"></h3>
+<h3 id="22-将秘钥配置到谷歌云上">2.2. 将秘钥配置到谷歌云上</h3>
+<p><strong>菜单 — 计算引擎 — 元数据 — SSH秘钥 — 修改 — 添加一项</strong><br>
+**<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591634090911-ec420daa-5325-4c24-8935-70e63333cf4b.png#align=left&amp;display=inline&amp;height=392&amp;margin=%5Bobject%20Object%5D&amp;originHeight=484&amp;originWidth=921&amp;size=0&amp;status=done&amp;style=none&amp;width=746" alt="" loading="lazy"><br>
+<strong>粘贴刚才从xshell复制的秘钥。在末尾添加 [空格][用户名] 这里就是“ google”，保存即可。</strong><br>
+**<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591634247799-6b7dcab7-6501-4128-b818-1ccbd6ccc4fd.png#align=left&amp;display=inline&amp;height=245&amp;margin=%5Bobject%20Object%5D&amp;originHeight=245&amp;originWidth=915&amp;size=0&amp;status=done&amp;style=none&amp;width=915" alt="" loading="lazy"></p>
+<h3 id="23-用xshell连接">2.3. 用xshell连接</h3>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591634273223-22c003bb-3c59-4b98-893d-d9a64511f6b5.png#align=left&amp;display=inline&amp;height=646&amp;margin=%5Bobject%20Object%5D&amp;originHeight=646&amp;originWidth=1075&amp;size=0&amp;status=done&amp;style=none&amp;width=1075" alt="" loading="lazy"><br>
+<strong>连上之后，输入命令 sudo -i切换到root用户.</strong></p>
 ]]></content>
     </entry>
     <entry>
@@ -176,325 +947,461 @@ ctx.drawImage(img,10,10); //图像名、图像坐标
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[px、em、rem、vw、百分比的区别，你真的知道吗？]]></title>
-        <id>https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/</id>
-        <link href="https://bonjouryy.github.io/post/pxemremvwbai-fen-bi-de-qu-bie-ni-zhen-de-zhi-dao-ma/">
+        <title type="html"><![CDATA[HTML&CSS复习]]></title>
+        <id>https://bonjouryy.github.io/post/HTML&amp;CSS复习/</id>
+        <link href="https://bonjouryy.github.io/post/HTML&amp;CSS复习/">
         </link>
-        <updated>2021-01-08T07:20:32.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>px</p>
-</blockquote>
-<p>px是固定单位，其他几种都是相对单位。当我们把电脑屏幕的分辨率调为1440*900时，css里面设置的1px实际的物理尺寸就是屏幕宽度的1/1440。也就是说，px的实际大小由电脑的屏幕分辨率决定。</p>
-<blockquote>
-<p>em</p>
-</blockquote>
-<p>默认字体大小的倍数，这里的默认字体大小指的是继承自父元素的字体大小。比如给p元素设置font-size:2em，那么我们先去找p元素的父元素的字体是多少，如果是16px，那么p元素就是32px。如果是20px，那么p元素就是40px。一级一级向上找，浏览器默认的字体大小是16px。当给元素设置width: 2em，这里的默认字体大小是该元素自身的实际字体大小。就不是父元素的字体大小了。</p>
-<blockquote>
-<p>rem</p>
-</blockquote>
-<p>根元素(html 节点)字体大小的倍数。比如给p元素设置font-size:2rem，那么我们直接看html节点设置的font-size的大小，从而算出p元素的字体大小。</p>
-<blockquote>
-<p>vw</p>
-</blockquote>
-<p>1vw 代表浏览器视口宽度的1%。</p>
-<blockquote>
-<p>1%</p>
-</blockquote>
-<p>font-size: 200% 和font-size: 2em 一样，表示字体大小是默认（继承自父亲）字体大小的2倍。<br>
-line-height: 200% 表示行高是自己字体大小的2倍。<br>
-width: 100%在标准盒模型下表示自己content的宽度等于父亲content的宽度，在IE盒模型下，表示自己content+padding+border的宽度等于父亲content的宽度。</p>
-<br/>
-<p>题目: 下面代码中，body、article、p的实际字体大小分别是多少？</p>
-<ul>
-<li>A、body是32px， article是16px，p是32px</li>
-<li>B、body是32px， article是32px，p是64px</li>
-<li>C、body是16px， article是16px，p是32px</li>
-<li>D、body是32px， article是32px，p是32px</li>
-</ul>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;em 演示&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;article&gt;
-      &lt;p&gt;hello 饥人谷&lt;/p&gt;
-    &lt;/article&gt;
-    
-    &lt;style&gt;
-      body{
-        font-size: 2em;
-      }
-      p {
-        font-size: 2em;
-      }
-&lt;/style&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-// 答案：B。html默认是16px，body是2em，是默认的2倍32px， article是32px，p是article的2倍64px。
+        <updated>2021-02-20T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="html部分">HTML部分</h1>
+<p>HTML：hyperText markup language<br>
+超文本标记语言</p>
+<html>
+<head></head> **设置浏览器参数**
+<body></body> **给用户所看**
+</html>
+<p><strong>乱码问题：<meta charset="utf-8"></strong><br>
+字符集：gb2312 gbk（包括繁体） Unicode utf-8（万国码）</p>
+<h3 id="一-标签">一、标签</h3>
+<p>段落标签：<p></p> <strong>成段展示，独占一行</strong><br>
+标题标签：<h1></h1>  <h2></h2>  <h3></h3>  <h4></h4>  <h5></h5>  <h6></h6> <strong>依次变小，独占一行</strong><br>
+加粗标签：<strong></strong><br>
+斜体标签：<em></em><br>
+删除线标签：<del></del><br>
+地址标签：<address></address> <strong>斜体+成段展示</strong></p>
+<p><strong>容器标签</strong><br>
+<strong><div></div>：独占一行</strong><br>
+<strong><span></span>：不独占一行</strong><br>
+<strong>作用：分块明确，让整个页面更加结构化</strong><br>
+<strong>捆绑操作的作用（搬书架）</strong></p>
+<pre><code class="language-html">&lt;strong color=&quot;red&quot;&gt; a &lt;/strong&gt;
+&lt;em color=&quot;red&quot;&gt; b &lt;/em&gt;
+&lt;del color=&quot;red&quot;&gt; c &lt;/del&gt;
 </code></pre>
-<br/>
-<p>题目: 以下代码中，p的width的实际值是多少？(单选)</p>
-<ul>
-<li>A、32px</li>
-<li>B、64px</li>
-<li>C、128px</li>
-<li>D、256px</li>
-</ul>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;em 演示&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;article&gt;
-      &lt;p&gt;hello 饥人谷&lt;/p&gt;
-    &lt;/article&gt;
-    
-    &lt;style&gt;
-      body{
-        font-size: 2em;
-      }
-      p {
-        font-size: 2em;
-        width: 2em;
-      }
-&lt;/style&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-// 答案：C。p的宽度是默认字号的2倍， 字号是64px。
+<pre><code class="language-html">&lt;div color=&quot;red&quot;&gt;
+	&lt;strong&gt; a &lt;/strong&gt;
+	&lt;em&gt; b &lt;/em&gt;
+	&lt;del&gt; c &lt;/del&gt;
+&lt;/div&gt;
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS选择器优先级是怎样计算的？]]></title>
-        <id>https://bonjouryy.github.io/post/css-xuan-ze-qi-you-xian-ji-shi-zen-yang-ji-suan-de/</id>
-        <link href="https://bonjouryy.github.io/post/css-xuan-ze-qi-you-xian-ji-shi-zen-yang-ji-suan-de/">
-        </link>
-        <updated>2021-01-08T03:45:00.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-口诀记忆">1、口诀记忆</h2>
-<p>选中且设置！important的 &gt; 权重高的 &gt; 权重相同位置靠后的 &gt; 来自继承的</p>
-<p>行间样式 &gt; id选择器 &gt; 类选择器 = 伪类选择器 = 属性选择器 &gt; 标签选择器 = 伪元素选择器<br>
-1000              100                  10                   10                     10                       1                         1</p>
-<h2 id="2-权重计算">2、权重计算</h2>
-<p>千位：有行间属性该位得一分</p>
-<p>百位：有ID选择器该位得一分</p>
-<p>十位：有类选择器、属性选择器、伪类该位分别得一分</p>
-<p>个位：有标签选择器、伪元素选择器该位分别得一分</p>
-<h2 id="3-举例">3、举例</h2>
-<p>#header p.content.active 得分为 0121</p>
-<p>.header p.active::before 得分为 0022</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS3]]></title>
-        <id>https://bonjouryy.github.io/post/css3/</id>
-        <link href="https://bonjouryy.github.io/post/css3/">
-        </link>
-        <updated>2021-01-01T07:20:32.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="一-前缀">一、前缀</h3>
+<p><strong>空格是分隔符，不代表文本的空格。作为分隔符，打多少个都只显示一个空格；回车也是分隔符，打多少个都只显示一个空格。</strong><br>
+<strong>html编码：“&amp;” 开头     “；”结尾</strong><br>
+<strong>空格： </strong><br>
+<strong>小于：&lt;</strong><br>
+<strong>大于：&gt;</strong><br>
+**<br>
+回车标签：<br><br>
+水平线标签：<hr><br>
+有序列表：<ol type="" reversed=“” start=""></p>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+**type属性：代表按哪种类型排序 1 a A i I**
+**reversed属性：倒序排序**
+**start属性：从第几个开始排序  只能写数字**
+<p><strong>无序列表：<ul type=""></strong><br>
+<strong><li></li></strong><br>
+<strong><li></li></strong><br>
+<strong><li></li></strong><br>
+<strong></ul></strong><br>
+<strong>type属性：disc（实心圆）---默认值</strong><br>
+<strong>square（方块）</strong><br>
+<strong>circle（圈）</strong><br>
+**<br>
+图片标签：<img src=""><br>
+<strong>src属性：1、网上的url</strong><br>
+<strong>2、本地的<strong><strong>绝对</strong></strong>路径（图片与网页<strong><strong>不</strong></strong>在<strong><strong>同一文件夹下）</strong></strong> 记忆：绝对不行</strong><br>
+<strong>3、本地的<strong><strong>相对</strong></strong>路径（图片与网页<strong><strong>在</strong></strong>同一文件夹下）</strong><br>
+<strong>alt属性：当图片无法加载时，显示文字。图片占位符</strong><br>
+<strong>title属性：当鼠标移到照片上时，显示文字。图片提示符</strong><br>
+**<br>
+超链接标签：<a href=“”></a><br>
+<strong>href属性：hyperText reference 超文本引用 所指向的超文本地址 https://www.baidu.com/</strong><br>
+<strong>target属性：target=&quot;_blank&quot; 在新标签页打开链接</strong><br>
+<strong>a标签可以包裹任何东西，但不能包裹自己</strong><br>
+**<br>
+<strong>a标签也可用作锚点，记录位置</strong><br>
+<a href="#id名称"></a><br>
+**<br>
+<strong>a标签还可以打电话，发邮件</strong><br>
+<a href="tel:xxxxxxxxx"></a><br>
+<a href="mailto:xxxxxxxxx"></a></p>
+<p><strong>a标签也可以用作协议限定符</strong></p>
+<p>表单标签：<form method="get/post" action=“”><br>
+Username <input type="text" name="username"><br>
+Password <input type="password" name="password"><br>
+你们最喜欢的明星<br>
+1、贝克汉姆<input type="radio" name="star" value="xiaolai"><br>
+2、莱昂纳多<input type="radio" name="star" value="xiaolai"><br>
+3、范勤阳<input type="radio" name="star" value="xiaofan"><br>
+单选框需保持name一致<br>
+<input type="submit"><br>
+<select name="province"></p>
+<option value="beijing">beijing</option>
+<option value="shanghai">shanghai</option>
+<option value="tianjing">tianjing</option>
+</select>
+</form>
+**method属性：发送数据的方式 get/post**
+action属性：发送数据的地址
+<input type="radio" checked="checked">
+checked属性：默认选中
+发送数据必须具备数据名（name）和数据值（value）
+# CSS部分
 <table>
 <thead>
 <tr>
-<th style="text-align:center">前缀</th>
-<th style="text-align:center">浏览器</th>
+<th style="text-align:center"><strong>主流浏览器 及 其内核</strong></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">-webkit</td>
-<td style="text-align:center">chrome 和 safari</td>
-</tr>
-<tr>
-<td style="text-align:center">-moz</td>
-<td style="text-align:center">firefox</td>
-</tr>
-<tr>
-<td style="text-align:center">-ms</td>
 <td style="text-align:center">IE</td>
+<td>trident</td>
 </tr>
 <tr>
-<td style="text-align:center">-o</td>
-<td style="text-align:center">opera</td>
+<td style="text-align:center">Firefox</td>
+<td>Gecko</td>
+</tr>
+<tr>
+<td style="text-align:center">Google Chrome</td>
+<td>Webkit/blink</td>
+</tr>
+<tr>
+<td style="text-align:center">Safari</td>
+<td>Webkit</td>
+</tr>
+<tr>
+<td style="text-align:center">Opera</td>
+<td>presto</td>
 </tr>
 </tbody>
 </table>
-<p>兼容性查询网站：http://css.doyoe.com/ https://caniuse.com/</p>
-<p>预处理器(pre-processor)：sass / less cssNext</p>
-<p>后处理器(post-processor)：autoprefixer</p>
-<h3 id="二-css-3-选择器">二、css 3 选择器</h3>
-<h4 id="relationship-selectors-关系系选择器">Relationship Selectors 关系系选择器</h4>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;JS Bin&lt;/title&gt;
-&lt;/head&gt;
+<p>css：cascading style sheet 层叠样式表</p>
+<h3 id="一-引入css">一、引入css</h3>
+<p>1、行间样式</p>
+<div style="
+width:100px;
+height:100px;
+"></div>
+2、页面级css
+<head>
+<style>
+div{
+width:100px;
+height:100px;
+}
+</style>
+</head>
+3、外部css文件
+<head>
+<link rel="stylesheet" type="text/css" href="xxx.css">
+</head>
+<h3 id="二-css选择器">二、css选择器</h3>
+<p>id选择器 **一个元素只能有一个id值 **  #名字<br>
+类选择器 多对多 .名字</p>
+<div class="demo demo1"></div>
+<div class="demo"></div>
+标签选择器 直接写元素名称 如 div{color:#f40;}
+通配符选择器 *{color:#f40;}
+属性选择器 [id]：选中有id属性的元素
+[id="only"]：选中属性id=only的元素
+父子选择器（后代选择器，所有后代，包括儿子和孙子）
+直接子元素选择器（儿子选择器，不包括孙子）
+并列选择器（div.demo   中间不需要加空格）
+分组选择器 em,div,span{} 中间用逗号隔开
+伪类选择器 :hover
+伪元素：::before / ::after
+<p>选择器优先级：！important &gt; 行间样式 &gt; id &gt; class/属性选择器/伪类选择器 &gt; 标签/伪元素 &gt; *</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>css权重</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">！important</td>
+<td>infinity</td>
+</tr>
+<tr>
+<td style="text-align:center">行间样式</td>
+<td>1000</td>
+</tr>
+<tr>
+<td style="text-align:center">id选择器</td>
+<td>100</td>
+</tr>
+<tr>
+<td style="text-align:center">类选择器</td>
+<td>属性选择器</td>
+</tr>
+<tr>
+<td style="text-align:center">标签选择器</td>
+<td>伪元素</td>
+</tr>
+<tr>
+<td style="text-align:center">通配符选择器</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三-css属性">三、css属性</h3>
+<p>font-size：字体大小，设置的是字体的高<br>
+font-weight：字体粗细 lighter normal bold bolder | 100 200 300 ———900<br>
+font-style：字体斜体<br>
+font-family：字体样式<br>
+color：字体颜色 transparent（透明色）<br>
+1、土鳖式（纯英文单词）<br>
+2、颜色代码<br>
+3、颜色函数<br>
+border：边框<br>
+text-align：规定元素中的文本的水平对齐方式<br>
+lien-height：一行文本的所占高度<br>
+text-indent：缩进<br>
+1em：1 * 该标签的font-size<br>
+text-decoration：文本装饰 underline（下划线）<br>
+cursor：当鼠标移到元素时，鼠标显示的样式 pointer（小手标）派<br>
+opacity：透明度 0-1</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>行级、块级、行级块 元素比较</strong></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">行级元素 display：inline</td>
+<td>块级元素 display：block</td>
+<td>行级块元素 display：inline-block</td>
+</tr>
+<tr>
+<td style="text-align:center">不独占一行</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">不可以通过css改变宽高</td>
+<td>独占一行</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">可以通过css改变宽高</td>
+<td>不独占一行</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">可以通过css改变宽高</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">span、strong、em、a、del</td>
+<td>div、p、ul、ol、li、form、address</td>
+<td>img</td>
+</tr>
+</tbody>
+</table>
+<p><strong>凡是带有inline属性的元素，都有文字特性</strong></p>
+<p>编程手段：反向编程，先定义功能，后添加html</p>
+<pre><code class="language-css">.red{background-color:red;}
+.green{background-color:green;}
+.gray{background-color:gray;}
+.size1{width:100px;height:100px;}
+.size2{width:200px;height:200px;}
+.size3{width:300px;height:300px;}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;red size1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;green size2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;gray size3&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>标签选择器更多是用于自定义标签</strong><br>
+<strong>通配符选择器更多是用于 设置padding和margin为0</strong></p>
+<h3 id="四-盒子模型">四、盒子模型</h3>
+<p>margin：外边距<br>
+border：边框<br>
+padding：内边距<br>
+content：内容区 width和height</p>
+<h3 id="五-定位层模型">五、定位（层模型）</h3>
+<p>position：relative（相对定位） | absolute（绝对定位）| fixed（固定定位）<br>
+z-index：默认0 值越大，离你越近<br>
+<strong>定位属性需与left、right、top、bottom配合使用</strong></p>
+<p><strong>当一个元素绝对定位（absolute）时，会脱离原来的层面跳到上一层进行定位</strong><br>
+<strong>相对于最近的有定位的父级进行定位，如果没有，相对于文档（html）进行定位</strong></p>
+<p><strong>当一个元素相对定位（relative）时，会保留原来的层面进行定位（灵魂出窍，但身体还在）</strong><br>
+<strong>相对于自己原来的位置进行定位</strong></p>
+<p><strong>企业开发当中，一般是用absolute定位，把relative当做标杆，即要定位的父级元素设置成relative</strong></p>
+<p><strong>元素居中的标准方法</strong></p>
+<pre><code class="language-css">div{
+	position:absolute | fixed;
+  left:50%;
+  top:50;
+  transform:translate(-50%,-50%);
+}
+</code></pre>
+<h3 id="六-两栏布局">六、两栏布局</h3>
+<pre><code class="language-html">&lt;div calss=&quot;right&quot;&gt;&lt;/div&gt;
+&lt;div calss=&quot;left&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.right{
+	position:absolute;
+  right0;
+  width:100px;
+	height:100px;
+  background-color:#fcc;
+  opacity:0.5;
+}
+.left{
+	margin-left:100px;
+  height:100px;
+  background-color:#123;
+}
+</code></pre>
+<h3 id="七-margin塌陷与margin合并">七、margin塌陷与margin合并</h3>
+<p>margin塌陷中，触发BFC需要在父元素中添加</p>
+<h3 id="八-浮动模型-floatleftright">八、浮动模型 float：left/right</h3>
+<p>float可以使元素排队，可以同时添加margin和padding<br>
+浮动元素会产生浮动流，所有产生浮动流的元素，块级元素看不到他们，产生了BFC的元素和文本类属性的元素（带有inline属性的元素）以及文本都能看到浮动元素。但不包括BFC中的position属性。浮动元素不保留原来位置</p>
+<p>父级里面有浮动的字级，需要展示边框把字级包住。（包裹浮动元素的方法---通过伪元素来实现）<br>
+伪元素：一个标签产生的时候，就会产生 ::before 和 ::after 两个伪元素<br>
+伪元素天生是行级元素，如果需要设置宽和高，需要改成块级元素或行级块元素。<br>
+<strong>凡是设置了 position:absloute 和 float:left/right 系统会自动转换成 display:inline-block</strong><br>
+<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1593780859404-e4afaec4-8965-4429-b96e-2cd0edc56db1.png#align=left&amp;display=inline&amp;height=526&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=526&amp;originWidth=745&amp;size=538172&amp;status=done&amp;style=none&amp;width=745" alt="image.png" loading="lazy"></p>
+<h3 id="九-清除浮动方法">九、清除浮动方法</h3>
+<pre><code class="language-html">&lt;style&gt;
+  .wrapper{border:1px solid black;}
+  .content{float:left;
+  				width:100px;
+    			height:100px;
+    			background-color:black;
+  }
+  .wrapper::after{
+  	content:&quot;&quot;;
+    clear:both;（清除浮动的元素必须是块元素）
+    display:block;
+  }
+&lt;/style&gt;
+
 &lt;body&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;p&gt;1&lt;/p&gt;
-  &lt;p&gt;2&lt;/p&gt;
-  &lt;p&gt;3&lt;/p&gt;
+	&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;
 </code></pre>
-<p>E + F 下一个满足条件的兄弟元素节点</p>
-<pre><code class="language-css">div + p {
-  background-color:red;
-}
-</code></pre>
-<p>E ~ F 下面所有满足条件的兄弟元素节点</p>
-<pre><code class="language-css">div + p {
-  background-color:red;
-}
-</code></pre>
-<h4 id="attribute-selectors-属性元素选择器">Attribute Selectors 属性元素选择器</h4>
-<p>E[attr~='val'] 选中带有attr属性，并且属性值是以 val 独立存在的元素。</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;JS Bin&lt;/title&gt;
-&lt;/head&gt;
+<p>文字溢出处理（文字溢出容器，要打点展示）<br>
+处理单行文本：<br>
+white-space：nowrap<br>
+overflow：hidden<br>
+text-overflow：ellipsis<br>
+处理多行文本：</p>
+<p>企业级开发</p>
+<p>图片用来替代文字，当css没有的时候，文字也要出现<br>
+text-indent：缩进文字的宽度<br>
+white-space：nowrap 强制不换行<br>
+overflow：hidden</p>
+<p>行级元素只能嵌套行级元素<br>
+块级元素可以嵌套任何元素<br>
+<strong>特殊：p标签不能嵌套块级元素</strong><br>
+<strong>a标签不能嵌套a标签</strong><br>
+**</p>
+<h3 id="十-两边留白前提是父子级都是块级元素">十、两边留白（前提是父子级都是块级元素）</h3>
+<pre><code class="language-html">&lt;style&gt;
+  .wrapper{
+  background-color:#123;
+  height:30px;}
+  
+  .content{
+  	background-color:#0f0;
+    width:1200px;
+    height:30px;
+    margin:0 auto;
+  }
+&lt;/style&gt;
+
 &lt;body&gt;
- &lt;div class='a'&gt;1&lt;/div&gt;
- &lt;div class='aa abc'&gt;2&lt;/div&gt;
- &lt;div class='a abc'&gt;3&lt;/div&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+  	&lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;
 </code></pre>
-<pre><code class="language-css">div[class~='a']{
-  background-color:red;
-}
-</code></pre>
-<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5Cfanqinyang%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210130194959966.png" alt="image-20210130194959966" loading="lazy"></figure>
-<p>E[attr | ='val'] 选中带有attr属性，并且属性值以 val 开头，或者 val- 开头的元素。</p>
+<p><strong>凡是带有inline的属性的标签都有文本的特点：写代码的时候，标签之间只要有文字分隔符，显示的时候就会有空隙</strong><br>
+<strong>文本类元素是底对齐，如果一个文本类元素里面有文字，那外面的文字就会与里面的文字底对齐</strong></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[MDN笔记]]></title>
-        <id>https://bonjouryy.github.io/post/mdn-bi-ji/</id>
-        <link href="https://bonjouryy.github.io/post/mdn-bi-ji/">
+        <title type="html"><![CDATA[代码初始化]]></title>
+        <id>https://bonjouryy.github.io/post/代码初始化/</id>
+        <link href="https://bonjouryy.github.io/post/代码初始化/">
         </link>
-        <updated>2020-12-26T03:59:26.000Z</updated>
-        <content type="html"><![CDATA[<p>文件名和文件夹名字用小写，单词之间的分割使用中划线，而不是下划线。<br>
-<img src="https://bonjouryy.github.io//post-images/1608955657477.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Git基本操作指令]]></title>
-        <id>https://bonjouryy.github.io/post/git/</id>
-        <link href="https://bonjouryy.github.io/post/git/">
-        </link>
-        <updated>2020-12-04T15:42:21.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>git init</p>
-</blockquote>
-<p>首先，如果想要用git，需要先把项目变成git仓库。执行git init即可</p>
-<blockquote>
-<p>git init test2</p>
-</blockquote>
-<p>如果git init 后面加文件夹名，那么它会新建一个文件夹，并且把这个文件夹设置为git仓库。</p>
-<blockquote>
-<p>ls -la</p>
-</blockquote>
-<p>查看目录下的所有文件(包括隐藏文件)</p>
-<blockquote>
-<p>ctrl + l</p>
-</blockquote>
-<p>清屏</p>
-<blockquote>
-<p>git clone 地址</p>
-</blockquote>
-<p>从网上克隆仓库</p>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>查看仓库状态</p>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<p>将所有修改添加至暂存区</p>
-<blockquote>
-<p>git commit -m &quot;描述&quot;</p>
-</blockquote>
-<p>提交版本</p>
-<blockquote>
-<p>git log</p>
-</blockquote>
-<p>查看所有版本记录(查看总共记录了几次快照)</p>
-<blockquote>
-<p>git log -p</p>
-</blockquote>
-<p>查看的详细的版本记录</p>
-<blockquote>
-<p>git log --oneline</p>
-</blockquote>
-<p>以一行展示的形式查看版本记录</p>
-<blockquote>
-<p>git log --all</p>
-</blockquote>
-<p>查看所有版本记录</p>
-<blockquote>
-<p>git log --oneline --all --graph</p>
-</blockquote>
-<p>以图形化的形式一行展示所有的log记录</p>
-<blockquote>
-<p>git checkout xxx</p>
-</blockquote>
-<p>回退到指定的历史节点（回退到指定的快照，吃后悔药，xxx代表节点的身份证）</p>
-<blockquote>
-<p>git tag -a 标签名 -m '描述'</p>
-</blockquote>
-<p>附注标签（tag一般发布版本的时候使用）</p>
-<blockquote>
-<p>git tag</p>
-</blockquote>
-<p>查看标签</p>
-<blockquote>
-<p>git show 标签名</p>
-</blockquote>
-<p>查看某个标签的详细信息</p>
-<blockquote>
-<p>git checkout 标签名</p>
-</blockquote>
-<p>回溯至标签所在的提交</p>
-<blockquote>
-<p>git branch 分支名</p>
-</blockquote>
-<p>创建分支</p>
-<blockquote>
-<p>git checkout 分支名</p>
-</blockquote>
-<p>切换分支</p>
-<blockquote>
-<p>git checkout -b 分支名</p>
-</blockquote>
-<p>创建并切换至分支</p>
-<blockquote>
-<p>git merge 要合并的分支名</p>
-</blockquote>
-<p>合并分支</p>
-<blockquote>
-<p>git remote add 远程仓库 远程地址</p>
-</blockquote>
-<p>添加远程仓库</p>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
-<p>列出所有远程仓库的详细信息</p>
-<blockquote>
-<p>git push -u 远程名 分支名</p>
-</blockquote>
-<p>上传代码</p>
-<blockquote>
-<p>git clone 仓库地址</p>
-</blockquote>
-<p>克隆(拷贝)仓库</p>
+        <updated>2021-02-10T16:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>一、引入初始化css样式表<br>
+<a href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css</a></p>
+<p>二、两边留白布局</p>
+<pre><code class="language-css">.container{
+	max-width:&quot;1800px&quot;; 定义中间内容的宽度，这个一般是写死的。
+  margin:0 auto;
+  display:&quot;block&quot;;
+}
+</code></pre>
+<p>三、左右浮动布局</p>
+<pre><code class="language-css">.fl{
+	float:&quot;left&quot;;
+}
+.fr{
+	float:&quot;right&quot;;
+}
+</code></pre>
+<p>四、清除浮动</p>
+<pre><code class="language-css">.clear-float::after{
+	content:&quot;&quot;;
+  display:&quot;block&quot;;
+  clear:&quot;both&quot;;
+}
+</code></pre>
+<p>五、分割系统</p>
+<pre><code class="language-css">.colum-1{
+	float:&quot;left&quot;;
+  width:&quot;10%&quot;;
+}
+.colum-2{
+	float:&quot;left&quot;;
+  width:&quot;20%&quot;;
+}
+.colum-3{
+	float:&quot;left&quot;;
+  width:&quot;30%&quot;;
+}
+.colum-4{
+	float:&quot;left&quot;;
+  width:&quot;40%&quot;;
+}
+.colum-5{
+	float:&quot;left&quot;;
+  width:&quot;50%&quot;;
+}
+.colum-6{
+	float:&quot;left&quot;;
+  width:&quot;60%&quot;;
+}
+.colum-7{
+	float:&quot;left&quot;;
+  width:&quot;70%&quot;;
+}
+.colum-8{
+	float:&quot;left&quot;;
+  width:&quot;80%&quot;;
+}
+.colum-9{
+	float:&quot;left&quot;;
+  width:&quot;90%&quot;;
+}
+</code></pre>
 ]]></content>
     </entry>
 </feed>

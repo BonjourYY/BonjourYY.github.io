@@ -1,0 +1,538 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>JavaScript复习（二） | Gridea</title>
+
+<link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615726922379">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://bonjouryy.github.io//styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Gridea
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1615726922379" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    JavaScript复习（二）
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-03-13 ·
+                    </time>
+                    
+                        <a href="https://bonjouryy.github.io/tag/pkcCImmhP/" class="post-tags">
+                            # JavaScript
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/nLAdfjg1jO/" class="post-tags">
+                            # 复习
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="三-函数">三、函数</h1>
+<h2 id="1定义">（1）定义</h2>
+<p>一系列代码语句的集合</p>
+<h2 id="2声明函数">（2）声明函数</h2>
+<p>function test () {}<br>
+函数名命名原则：小驼峰原则，多个单词拼接时，第一个单词首字母小写，其余单词首字母大写。</p>
+<h2 id="3调用函数">（3）调用函数</h2>
+<p>test ();   ---&gt;   可执行多次</p>
+<h2 id="4函数表达式">（4）函数表达式</h2>
+<h3 id="1-命名函数表达式">1、命名函数表达式</h3>
+<p>var test = function test () {}</p>
+<h3 id="2-匿名函数表达式">2、匿名函数表达式</h3>
+<p>var demo = function () {}</p>
+<h2 id="5函数参数">（5）函数参数</h2>
+<pre><code class="language-javascript">function test(a , b)
+{
+  // var a,
+  // var b;
+  // test(a , b) 就相当于在函数体里面 var a; var b; 然后在调用函数的时候，将实际值传给a 和 b;
+	var c = a + b;
+}
+test(1 , 2);
+
+a b 是形参，1 2 是实参。
+</code></pre>
+<pre><code class="language-javascript">function test (a)
+{
+	// arguments -- [1, 2, 3, 4] 实参列表 这个列表是隐藏的。
+  console.log(arguments);  可直接输出数组
+  console.log(test.length);
+}
+test (1 , 2 , 3 , 4);
+</code></pre>
+<p>举例说明如下</p>
+<pre><code class="language-javascript">function test (a , b , c , d)
+{
+	if(test.length &gt; arguments.length)
+  {
+  	console.log(&quot;形参多了&quot;);
+  }else if(tese.length &lt; arguments.length)
+  {
+  	console.log(&quot;实参多了&quot;);
+  }else 
+  {
+  	console.log(&quot;相等&quot;);
+  }
+}
+test (1 , 2);
+</code></pre>
+<pre><code class="language-javascript">function test (a , b)
+{
+	// var a = 1;
+  a = 2;
+  console.log(arguments[0]);  // 输出 2  当形参和实参相等时，arguments[i]与形参的第 i+1 位存在映射关系。
+  											      //         当形参的 i+1 位和实参的 arguments[i] 位不对应时，则不存在。
+}
+test (1 , 2);
+</code></pre>
+<p>return的作用：1、终止函数<br>
+2、用变量接受函数的返回值（把值返回到函数外部） var a = Test();<br>
+3、retuen只能写在函数体里面</p>
+<pre><code class="language-javascript">function myNumber(target)
+{
+	return +target;
+}
+var num = myNumber(&quot;123&quot;);
+</code></pre>
+<h2 id="6函数作用域">（6）函数作用域</h2>
+<p>全局变量：在script标签里定义的变量<br>
+局部变量：在函数里面定义的变量<br>
+在函数里面可以访问在外面定义的全局变量（嵌套函数也适用），函数外无法访问函数里面的变量。彼此独立的函数不可以相互访问。儿子可以向爸爸、爷爷要钱。但爸爸和爷爷不可以向儿子要钱。</p>
+<h2 id="7递归">（7）递归</h2>
+<p>注意点：1、找规律 2、找出口（用已知条件找出口）</p>
+<h2 id="9预编译">（9）预编译</h2>
+<p>JS执行三部曲：</p>
+<ol>
+<li>语法分析</li>
+<li>预编译  ---&gt; 变量提升</li>
+<li>解释执行</li>
+</ol>
+<p>函数预编译五部曲：预编译发生函数执行的前一刻</p>
+<ol>
+<li>函数声明整体提升，定义变量 声明部分提升，赋值部分不提升。</li>
+<li>创建AO对象 Activation Object（执行期上下文）</li>
+<li>找形参和变量声明，将变量声明的名和形参名作为AO属性名，值为underfined</li>
+<li>将实参值和形参统一</li>
+<li>在函数体里面找函数声明，把函数声明的名作为属性名放到AO对象中，值变成相应的函数体</li>
+</ol>
+<p>全局预编译四步曲：</p>
+<ol>
+<li>函数声明整体提升，定义变量 声明部分提升，赋值部分不提升。</li>
+<li>创建GO对象</li>
+<li>找变量声明，将变量声明的名作为GO的属性名，值为underfined</li>
+<li>找函数声明，把函数声明的名作为属性名放到GO对象中，值变成相应的函数体</li>
+</ol>
+<p>imply global 暗示全局变量：即任何变量，如果变量未经声明就赋值，此变量就为全局对象（window）所有。<br>
+a = 10; ---&gt; window.a = 10;<br>
+一切声明的全局变量，全是window的属性。<br>
+var a = 10; ---&gt; window.a = 10;<br>
+window就是全局的域。</p>
+<h2 id="10作用域链">（10）作用域链</h2>
+<h2 id="11对象">（11）对象</h2>
+<pre><code class="language-javascript">var mrDeng = {
+	name:&quot;MrDeng&quot;,
+  age:40,
+  sex:&quot;male&quot;,
+  smoke:function(){
+    console.log(&quot;I am smoking!&quot;);
+    this.health --; //此处一般不用mrDeng，用this（调用属性时，前面必须写对象）
+  },
+  drink:function(){
+    console.log(&quot;I am drink&quot;);
+    this.health ++; //此处一般不用mrDeng，用this（调用属性时，前面必须写对象）
+  },
+} //创建对象
+
+属性的增删改查
+mrDeng.wife = &quot;xiaoliu&quot;; //增加 &amp;&amp; 修改
+mrDeng.wife; //查询
+delete mrDeng.sex; //删除
+
+对象的属性没有赋值时，将返回undefined;
+对象的属性值为函数时，称之为函数的方法。并且可以支持传参，return
+
+----------------------------------------------------------------------
+
+对象的创建方法
+1、var obj = {} //plainObject 对象字面量/对象直接量
+2、构造函数 --- 必须要有 new 才行
+			 1）系统自带的构造函数
+       Object() / Number() / Array() ...
+       var obj = new Object();
+			 obj.name = 'abc';
+			 obj.sex = 'male';
+       2）自定义构造函数 --- 命名需采用大驼峰原则：所有单词大字母大写
+       function Car(color){
+       	this.name = 'BMW',
+        this.height = '1400',
+       	this.lang = '4900',
+        this.run = function(){
+        	this.health --;
+        },
+  			this.color = color,
+       }
+			 var car1 = new Car('red');
+       
+构造函数内部原理
+1、在函数体最前面隐式的加上this={};
+2、执行this.xxx = xxx;
+3、隐式的返回this;
+         
+function Person (name,height){
+	// var this();
+  this.name = name,
+  this.height = height,
+  this.say = function (){
+  	console.log(this.say);
+  },
+    return 123; //如果这边写返回的是原始值，那么无效
+    return {}; //如果这边写返回的是空对象，则返回空对象
+  // return this;
+}
+    var person1 = new Person('xiaowang',180);
+    var person2 = new Person('xiaozhang',175);
+
+
+         
+
+</code></pre>
+<h2 id="12包装类">（12）包装类</h2>
+<p>原始值是没有属性和方法的，只有对象才有。但是原始值可以利用构造函数将其变成对象。</p>
+<pre><code class="language-javascript">var num = new Number(123); //此时num就是一个对象，可以给它增加属性 数字类型的对象
+var str = new String('abcd'); // 字符串类型的对象
+var bol = new Boolean('true'); // 布尔类型的对象
+
+// 包装类
+var num = 4;
+num.len = 3;
+// 原始值本身是没有属性的，但是如果这样写；系统就会 new Number(4).len = 3 ，把3放进去 然后销毁 delete
+console.log(num.len); //undefined
+// 接着当我需要访问num.len,因为之前已经销毁了，所以又会新建一个 new Number(4).len ,所以会返回undefined
+</code></pre>
+<h2 id="13原型">（13）原型</h2>
+<p>1、定义：原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过该改造函数产生的对象，可以继承该原型的属性和方法。</p>
+<pre><code class="language-javascript">function Person(){ //定义构造函数
+  this.name = 'fan';
+  this.age = 20;
+}
+// 当定义一个构造函数后，默认会产生Person.prototype={}
+Person.prototype.name = 'hehe'; //增加属性，通过Person()这个构造函数制造出的对象默认会继承此属性。
+var person = new Person();
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+
+// 一个对象的属性可以有自己的，也可以有 由原型那继承来的。
+</code></pre>
+<p>2、利用原型特点和概念，可以提取共有属性。</p>
+<pre><code class="language-javascript">Car.prototype.carName = 'BMW';
+Car.prototype.height = 1400;
+function Car (color,owner){
+	this.owner = owner;
+  this.color = color;
+}
+var car = new Car('red','ji');
+var car = new Car('green','deng');
+
+----------------------------------------------------------------------------
+
+原型属性的增删改查
+Car.prototype.xxx = '';
+car.xxx = ''; //这种方法是不行的
+delete Car.prototype.xxx;
+delete car.xxx; //这种方法是不行的
+
+Person.prototype = {
+	name:xxx,
+  age:xxx,
+  wife:xxx,
+} // 原型添加属性也可以是这种写法
+</code></pre>
+<p>3、对象如何查看原型 --&gt; 隐式属性 --&gt; <em>proto</em></p>
+<pre><code class="language-javascript">function Person(){
+	// var this ={__proto__:Person.prototype,} //三段式
+}
+var person = new Person();
+function obj = {
+	name : 'sunny'
+}
+person.__proto__ = obj; //可以更改对象的__proto__属性指向
+</code></pre>
+<p>4、对象如何查看对象的构造函数 --&gt; constructor</p>
+<pre><code class="language-javascript">prototype.constructor; //这个属性里面是构造这个对象的构造函数
+function Car(){};
+var car = new Car();
+car.constructor; // return function Car(){};
+</code></pre>
+<h2 id="14原型链">（14）原型链</h2>
+<pre><code class="language-javascript">Grand.prototype.lastName = &quot;Deng&quot;;
+function Grand() {}
+var grand = new Grand();
+Father.prototype = grand; //将Father的原型链指向grand对象
+function Father() {
+  this.name = &quot;xuming&quot;;
+}
+var father = new Father();
+Son.prototype = father; //将Son的原型链指向father对象
+function Son() {
+  this.hobbit = &quot;smoke&quot;;
+}
+var son = new Son();
+console.log(son.lastName); //Deng 原型链的应用
+console.log(son.toString()); //返回的是 Object.__proto__的toString()方法
+
+// 原型链的连接点为 __proto__
+// 原型的终端为 Object.__proto__
+</code></pre>
+<h2 id="15命名空间">（15）命名空间</h2>
+<p>目的：解决多人开发时变量命名冲突的问题<br>
+变量私有化，不会污染全局变量</p>
+<pre><code class="language-javascript">var name = 123;
+var initDeng = (function(){ //立即执行函数
+	var name = 456;
+	function callName(){
+	console.log(name);
+}
+	return function(){
+	callName();
+}
+}())
+initDeng() //456,而不是123
+</code></pre>
+<h2 id="16对象的枚举遍历">（16）对象的枚举（遍历）</h2>
+<p>枚举：enumeration</p>
+<pre><code class="language-javascript">var obj = {
+        name: &quot;fan&quot;,
+        age: 20,
+        sex: &quot;male&quot;,
+      }; //定义对象
+
+遍历对象的通用方法：for in 循环
+for (var key in obj){ //key里面存放的是各个属性的值，为String类型
+	console.log(key) //依次输出obj的属性值
+  console.log(obj.key) //不能这么写，obj.key --&gt; obj[&quot;key&quot;] 而obj没有key这个属性
+  console.log(obj[key]) //需要这么写才可以
+}
+
+一般情况下，如果存在原型链，for in 循环会把原型链的属性也打印出来（但不包括Object.prototype）
+所以我们需要在循环之前，先用hasOwnProperty方法判断是否是自己的属性
+var obj = {
+        name: &quot;fan&quot;,
+        age: 20,
+        sex: &quot;male&quot;,
+      }; //定义对象
+obj.__proto__ = {lastName:&quot;fan&quot;};
+for (var key in obj){
+	if(obj.hasOwnProperty(key)){ //判断属性是否是自己的属性，如果是则打印，不是则不打印
+  console.log(obj[key]);
+  }
+}
+
+in方法与hasOwnProperty方法的区别
+共同点：不管调用哪个方法,返回的都是Boolean值
+in：判断对象上面能不能访问到这个熟悉  obj.in(name) //判断obj能不能访问到name属性
+hasOwnProperty方法：判断是否是自己本身的属性 obj.hasOwnProperty(name) //判断是否是自己本身的属性，而并非是原型的
+
+instanceof操作符讲解（返回的是Boolean值）
+A instanceof B
+//官方定义：A对象是不是B构造函数构造出来的
+//老成定义：A对象的原型链上有没有B的原型（B.prototype）
+
+区别一个变量是数组还是对象的三种方法
+var demo = arr || object
+1、constructer
+2、instanceof
+3、toString
+</code></pre>
+<h2 id="17this指向">（17）this指向</h2>
+<p>函数预编译过程 this ---&gt; window      AO<br>
+全局作用域里 this ---&gt; window          GO<br>
+call/apply 可以改变函数运行时的this指向<br>
+obj.function(); function()里面的this指向obj</p>
+<pre><code class="language-javascript">var name = &quot;222&quot;;
+var a = {
+	name:&quot;1111&quot;,
+  say:function(){
+  	console.log(this.name)
+  }
+}
+var fun = a.say;
+fun();
+a.say();
+var b ={
+	name:&quot;333&quot;,
+	say:function(fun){
+  fun();
+  }
+}
+b.say(a.say);
+b.say = a.say;
+b.say();
+</code></pre>
+<h2 id="18arguments">（18）arguments</h2>
+<p>首先，需要明确一个定义，arguments只有两个方法 arguments.callee / arguments.length<br>
+1、arguments.callee    一般用于立即执行函数</p>
+<pre><code class="language-javascript">var num = (function (n) {
+	if(n==1){
+  	return 1
+  }
+  return n * arguments.callee(n - 1);
+} (100))
+</code></pre>
+<p>2、caller是函数的属性</p>
+<pre><code class="language-javascript">function test(){
+	demo();
+}
+function demo(){
+	demo.caller; //test 返回的是调用demo方法的那个环境
+}
+test();
+</code></pre>
+<h2 id="19克隆">（19）克隆</h2>
+<p>1、浅层克隆<br>
+2、深度克隆</p>
+<pre><code class="language-javascript">var obj = {
+	name:&quot;abc&quot;,
+  age:123,
+  card:[&quot;visa&quot;,&quot;master&quot;],
+  wife:{
+  	name:&quot;bcd&quot;,
+    son:{
+    	name:&quot;aaa&quot;
+    }
+  }
+}
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/关于CSS伪类选择器 _first-child 的坑/" class="post-title gt-a-link">
+                    关于CSS伪类选择器 _first-child 的坑
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">温故而知新</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://bonjouryy.github.io//atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

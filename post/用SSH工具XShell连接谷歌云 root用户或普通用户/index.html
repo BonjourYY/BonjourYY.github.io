@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Git基本操作指令 | Gridea</title>
+<title>用SSH工具XShell连接谷歌云 root用户或普通用户 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615726922379">
 
@@ -89,128 +89,72 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    Git基本操作指令
+                    用SSH工具XShell连接谷歌云 root用户或普通用户
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-12-04 ·
+                        · 2021-03-01 ·
                     </time>
                     
-                        <a href="https://bonjouryy.github.io/tag/0cPVL_BRW/" class="post-tags">
-                            # git
+                        <a href="https://bonjouryy.github.io/tag/yMwE1orG1/" class="post-tags">
+                            # XShell
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/TZ2nbLcIVW/" class="post-tags">
+                            # 谷歌云
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <blockquote>
-<p>git init</p>
-</blockquote>
-<p>首先，如果想要用git，需要先把项目变成git仓库。执行git init即可</p>
-<blockquote>
-<p>git init test2</p>
-</blockquote>
-<p>如果git init 后面加文件夹名，那么它会新建一个文件夹，并且把这个文件夹设置为git仓库。</p>
-<blockquote>
-<p>ls -la</p>
-</blockquote>
-<p>查看目录下的所有文件(包括隐藏文件)</p>
-<blockquote>
-<p>ctrl + l</p>
-</blockquote>
-<p>清屏</p>
-<blockquote>
-<p>git clone 地址</p>
-</blockquote>
-<p>从网上克隆仓库</p>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>查看仓库状态</p>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<p>将所有修改添加至暂存区</p>
-<blockquote>
-<p>git commit -m &quot;描述&quot;</p>
-</blockquote>
-<p>提交版本</p>
-<blockquote>
-<p>git log</p>
-</blockquote>
-<p>查看所有版本记录(查看总共记录了几次快照)</p>
-<blockquote>
-<p>git log -p</p>
-</blockquote>
-<p>查看的详细的版本记录</p>
-<blockquote>
-<p>git log --oneline</p>
-</blockquote>
-<p>以一行展示的形式查看版本记录</p>
-<blockquote>
-<p>git log --all</p>
-</blockquote>
-<p>查看所有版本记录</p>
-<blockquote>
-<p>git log --oneline --all --graph</p>
-</blockquote>
-<p>以图形化的形式一行展示所有的log记录</p>
-<blockquote>
-<p>git checkout xxx</p>
-</blockquote>
-<p>回退到指定的历史节点（回退到指定的快照，吃后悔药，xxx代表节点的身份证）</p>
-<blockquote>
-<p>git tag -a 标签名 -m '描述'</p>
-</blockquote>
-<p>附注标签（tag一般发布版本的时候使用）</p>
-<blockquote>
-<p>git tag</p>
-</blockquote>
-<p>查看标签</p>
-<blockquote>
-<p>git show 标签名</p>
-</blockquote>
-<p>查看某个标签的详细信息</p>
-<blockquote>
-<p>git checkout 标签名</p>
-</blockquote>
-<p>回溯至标签所在的提交</p>
-<blockquote>
-<p>git branch 分支名</p>
-</blockquote>
-<p>创建分支</p>
-<blockquote>
-<p>git checkout 分支名</p>
-</blockquote>
-<p>切换分支</p>
-<blockquote>
-<p>git checkout -b 分支名</p>
-</blockquote>
-<p>创建并切换至分支</p>
-<blockquote>
-<p>git merge 要合并的分支名</p>
-</blockquote>
-<p>合并分支</p>
-<blockquote>
-<p>git remote add 远程仓库 远程地址</p>
-</blockquote>
-<p>添加远程仓库</p>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
-<p>列出所有远程仓库的详细信息</p>
-<blockquote>
-<p>git push -u 远程名 分支名</p>
-</blockquote>
-<p>上传代码</p>
-<blockquote>
-<p>git clone 仓库地址</p>
-</blockquote>
-<p>克隆(拷贝)仓库</p>
+                    <h1 id="目录">目录</h1>
+<p>1.以root用户登入<br>
+2.普通用户，秘钥登入</p>
+<h2 id="1用root用户登入">1.用root用户登入</h2>
+<h3 id="11进入谷歌云实例面板">1.1.进入谷歌云实例面板</h3>
+<figure data-type="image" tabindex="1"><img src="https://cdn.nlark.com/yuque/0/2020/jpeg/1353789/1591633000851-7ea4a15e-cec1-4e70-95cb-4002db1d5a0e.jpeg#align=left&amp;display=inline&amp;height=291&amp;margin=%5Bobject%20Object%5D&amp;originHeight=399&amp;originWidth=1024&amp;size=0&amp;status=done&amp;style=none&amp;width=746" alt="" loading="lazy"></figure>
+<h3 id="12切换到root角色">1.2.切换到root角色</h3>
+<pre><code class="language-nginx">sudo -i
+</code></pre>
+<h3 id="13修改ssh配置文件etcsshsshd_config">1.3.修改SSH配置文件/etc/ssh/sshd_config</h3>
+<pre><code class="language-nginx">vi /etc/ssh/sshd_config
+</code></pre>
+<p><strong>修改PermitRootLogin和PasswordAuthentication为yes</strong></p>
+<pre><code class="language-nginx"># Authentication:
+PermitRootLogin yes //默认为no，需要开启root用户访问改为yes
+# Change to no to disable tunnelled clear text passwords
+PasswordAuthentication yes //默认为no，改为yes开启密码登陆
+</code></pre>
+<h3 id="14给root用户设置密码">1.4.给root用户设置密码</h3>
+<pre><code class="language-nginx">passwd root
+</code></pre>
+<h3 id="15重启ssh服务使修改生效">1.5.重启SSH服务使修改生效</h3>
+<pre><code class="language-nginx">/etc/init.d/ssh restart
+</code></pre>
+<h3 id="16登录">1.6.登录</h3>
+<p>在xshell中，直接使用root账号密码登录。</p>
+<h2 id="2新建普通用户登入">2.新建普通用户登入</h2>
+<h3 id="21-本地用xshell生成密秘钥">2.1. 本地用xshell生成密秘钥</h3>
+<h3 id=""><img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591633946723-aa6aa453-4a4f-4a14-a763-fd7b8f727a0f.png#align=left&amp;display=inline&amp;height=540&amp;margin=%5Bobject%20Object%5D&amp;originHeight=780&amp;originWidth=1078&amp;size=0&amp;status=done&amp;style=none&amp;width=746" alt="" loading="lazy"></h3>
+<h3 id="22-将秘钥配置到谷歌云上">2.2. 将秘钥配置到谷歌云上</h3>
+<p><strong>菜单 — 计算引擎 — 元数据 — SSH秘钥 — 修改 — 添加一项</strong><br>
+**<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591634090911-ec420daa-5325-4c24-8935-70e63333cf4b.png#align=left&amp;display=inline&amp;height=392&amp;margin=%5Bobject%20Object%5D&amp;originHeight=484&amp;originWidth=921&amp;size=0&amp;status=done&amp;style=none&amp;width=746" alt="" loading="lazy"><br>
+<strong>粘贴刚才从xshell复制的秘钥。在末尾添加 [空格][用户名] 这里就是“ google”，保存即可。</strong><br>
+**<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591634247799-6b7dcab7-6501-4128-b818-1ccbd6ccc4fd.png#align=left&amp;display=inline&amp;height=245&amp;margin=%5Bobject%20Object%5D&amp;originHeight=245&amp;originWidth=915&amp;size=0&amp;status=done&amp;style=none&amp;width=915" alt="" loading="lazy"></p>
+<h3 id="23-用xshell连接">2.3. 用xshell连接</h3>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1591634273223-22c003bb-3c59-4b98-893d-d9a64511f6b5.png#align=left&amp;display=inline&amp;height=646&amp;margin=%5Bobject%20Object%5D&amp;originHeight=646&amp;originWidth=1075&amp;size=0&amp;status=done&amp;style=none&amp;width=1075" alt="" loading="lazy"><br>
+<strong>连上之后，输入命令 sudo -i切换到root用户.</strong></p>
 
                 </div>
             </article>
         </div>
 
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/相邻选择器和兄弟选择器的区别/" class="post-title gt-a-link">
+                    相邻选择器和兄弟选择器的区别
+                </a>
+            </div>
         
 
         

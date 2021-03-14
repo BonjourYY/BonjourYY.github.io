@@ -1,0 +1,546 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>HTML&amp;CSS复习 | Gridea</title>
+
+<link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615726922379">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://bonjouryy.github.io//styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Gridea
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1615726922379" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    HTML&amp;CSS复习
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-02-21 ·
+                    </time>
+                    
+                        <a href="https://bonjouryy.github.io/tag/uhB9OVPeke/" class="post-tags">
+                            # CSS
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/nLAdfjg1jO/" class="post-tags">
+                            # 复习
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/FUL01fKi8h/" class="post-tags">
+                            # HTML
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="html部分">HTML部分</h1>
+<p>HTML：hyperText markup language<br>
+超文本标记语言</p>
+<html>
+<head></head> **设置浏览器参数**
+<body></body> **给用户所看**
+</html>
+<p><strong>乱码问题：<meta charset="utf-8"></strong><br>
+字符集：gb2312 gbk（包括繁体） Unicode utf-8（万国码）</p>
+<h3 id="一-标签">一、标签</h3>
+<p>段落标签：<p></p> <strong>成段展示，独占一行</strong><br>
+标题标签：<h1></h1>  <h2></h2>  <h3></h3>  <h4></h4>  <h5></h5>  <h6></h6> <strong>依次变小，独占一行</strong><br>
+加粗标签：<strong></strong><br>
+斜体标签：<em></em><br>
+删除线标签：<del></del><br>
+地址标签：<address></address> <strong>斜体+成段展示</strong></p>
+<p><strong>容器标签</strong><br>
+<strong><div></div>：独占一行</strong><br>
+<strong><span></span>：不独占一行</strong><br>
+<strong>作用：分块明确，让整个页面更加结构化</strong><br>
+<strong>捆绑操作的作用（搬书架）</strong></p>
+<pre><code class="language-html">&lt;strong color=&quot;red&quot;&gt; a &lt;/strong&gt;
+&lt;em color=&quot;red&quot;&gt; b &lt;/em&gt;
+&lt;del color=&quot;red&quot;&gt; c &lt;/del&gt;
+</code></pre>
+<pre><code class="language-html">&lt;div color=&quot;red&quot;&gt;
+	&lt;strong&gt; a &lt;/strong&gt;
+	&lt;em&gt; b &lt;/em&gt;
+	&lt;del&gt; c &lt;/del&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>空格是分隔符，不代表文本的空格。作为分隔符，打多少个都只显示一个空格；回车也是分隔符，打多少个都只显示一个空格。</strong><br>
+<strong>html编码：“&amp;” 开头     “；”结尾</strong><br>
+<strong>空格： </strong><br>
+<strong>小于：&lt;</strong><br>
+<strong>大于：&gt;</strong><br>
+**<br>
+回车标签：<br><br>
+水平线标签：<hr><br>
+有序列表：<ol type="" reversed=“” start=""></p>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+**type属性：代表按哪种类型排序 1 a A i I**
+**reversed属性：倒序排序**
+**start属性：从第几个开始排序  只能写数字**
+<p><strong>无序列表：<ul type=""></strong><br>
+<strong><li></li></strong><br>
+<strong><li></li></strong><br>
+<strong><li></li></strong><br>
+<strong></ul></strong><br>
+<strong>type属性：disc（实心圆）---默认值</strong><br>
+<strong>square（方块）</strong><br>
+<strong>circle（圈）</strong><br>
+**<br>
+图片标签：<img src=""><br>
+<strong>src属性：1、网上的url</strong><br>
+<strong>2、本地的<strong><strong>绝对</strong></strong>路径（图片与网页<strong><strong>不</strong></strong>在<strong><strong>同一文件夹下）</strong></strong> 记忆：绝对不行</strong><br>
+<strong>3、本地的<strong><strong>相对</strong></strong>路径（图片与网页<strong><strong>在</strong></strong>同一文件夹下）</strong><br>
+<strong>alt属性：当图片无法加载时，显示文字。图片占位符</strong><br>
+<strong>title属性：当鼠标移到照片上时，显示文字。图片提示符</strong><br>
+**<br>
+超链接标签：<a href=“”></a><br>
+<strong>href属性：hyperText reference 超文本引用 所指向的超文本地址 https://www.baidu.com/</strong><br>
+<strong>target属性：target=&quot;_blank&quot; 在新标签页打开链接</strong><br>
+<strong>a标签可以包裹任何东西，但不能包裹自己</strong><br>
+**<br>
+<strong>a标签也可用作锚点，记录位置</strong><br>
+<a href="#id名称"></a><br>
+**<br>
+<strong>a标签还可以打电话，发邮件</strong><br>
+<a href="tel:xxxxxxxxx"></a><br>
+<a href="mailto:xxxxxxxxx"></a></p>
+<p><strong>a标签也可以用作协议限定符</strong></p>
+<p>表单标签：<form method="get/post" action=“”><br>
+Username <input type="text" name="username"><br>
+Password <input type="password" name="password"><br>
+你们最喜欢的明星<br>
+1、贝克汉姆<input type="radio" name="star" value="xiaolai"><br>
+2、莱昂纳多<input type="radio" name="star" value="xiaolai"><br>
+3、范勤阳<input type="radio" name="star" value="xiaofan"><br>
+单选框需保持name一致<br>
+<input type="submit"><br>
+<select name="province"></p>
+<option value="beijing">beijing</option>
+<option value="shanghai">shanghai</option>
+<option value="tianjing">tianjing</option>
+</select>
+</form>
+**method属性：发送数据的方式 get/post**
+action属性：发送数据的地址
+<input type="radio" checked="checked">
+checked属性：默认选中
+发送数据必须具备数据名（name）和数据值（value）
+# CSS部分
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>主流浏览器 及 其内核</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">IE</td>
+<td>trident</td>
+</tr>
+<tr>
+<td style="text-align:center">Firefox</td>
+<td>Gecko</td>
+</tr>
+<tr>
+<td style="text-align:center">Google Chrome</td>
+<td>Webkit/blink</td>
+</tr>
+<tr>
+<td style="text-align:center">Safari</td>
+<td>Webkit</td>
+</tr>
+<tr>
+<td style="text-align:center">Opera</td>
+<td>presto</td>
+</tr>
+</tbody>
+</table>
+<p>css：cascading style sheet 层叠样式表</p>
+<h3 id="一-引入css">一、引入css</h3>
+<p>1、行间样式</p>
+<div style="
+width:100px;
+height:100px;
+"></div>
+2、页面级css
+<head>
+<style>
+div{
+width:100px;
+height:100px;
+}
+</style>
+</head>
+3、外部css文件
+<head>
+<link rel="stylesheet" type="text/css" href="xxx.css">
+</head>
+<h3 id="二-css选择器">二、css选择器</h3>
+<p>id选择器 **一个元素只能有一个id值 **  #名字<br>
+类选择器 多对多 .名字</p>
+<div class="demo demo1"></div>
+<div class="demo"></div>
+标签选择器 直接写元素名称 如 div{color:#f40;}
+通配符选择器 *{color:#f40;}
+属性选择器 [id]：选中有id属性的元素
+[id="only"]：选中属性id=only的元素
+父子选择器（后代选择器，所有后代，包括儿子和孙子）
+直接子元素选择器（儿子选择器，不包括孙子）
+并列选择器（div.demo   中间不需要加空格）
+分组选择器 em,div,span{} 中间用逗号隔开
+伪类选择器 :hover
+伪元素：::before / ::after
+<p>选择器优先级：！important &gt; 行间样式 &gt; id &gt; class/属性选择器/伪类选择器 &gt; 标签/伪元素 &gt; *</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>css权重</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">！important</td>
+<td>infinity</td>
+</tr>
+<tr>
+<td style="text-align:center">行间样式</td>
+<td>1000</td>
+</tr>
+<tr>
+<td style="text-align:center">id选择器</td>
+<td>100</td>
+</tr>
+<tr>
+<td style="text-align:center">类选择器</td>
+<td>属性选择器</td>
+</tr>
+<tr>
+<td style="text-align:center">标签选择器</td>
+<td>伪元素</td>
+</tr>
+<tr>
+<td style="text-align:center">通配符选择器</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三-css属性">三、css属性</h3>
+<p>font-size：字体大小，设置的是字体的高<br>
+font-weight：字体粗细 lighter normal bold bolder | 100 200 300 ———900<br>
+font-style：字体斜体<br>
+font-family：字体样式<br>
+color：字体颜色 transparent（透明色）<br>
+1、土鳖式（纯英文单词）<br>
+2、颜色代码<br>
+3、颜色函数<br>
+border：边框<br>
+text-align：规定元素中的文本的水平对齐方式<br>
+lien-height：一行文本的所占高度<br>
+text-indent：缩进<br>
+1em：1 * 该标签的font-size<br>
+text-decoration：文本装饰 underline（下划线）<br>
+cursor：当鼠标移到元素时，鼠标显示的样式 pointer（小手标）派<br>
+opacity：透明度 0-1</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>行级、块级、行级块 元素比较</strong></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">行级元素 display：inline</td>
+<td>块级元素 display：block</td>
+<td>行级块元素 display：inline-block</td>
+</tr>
+<tr>
+<td style="text-align:center">不独占一行</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">不可以通过css改变宽高</td>
+<td>独占一行</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">可以通过css改变宽高</td>
+<td>不独占一行</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">可以通过css改变宽高</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">span、strong、em、a、del</td>
+<td>div、p、ul、ol、li、form、address</td>
+<td>img</td>
+</tr>
+</tbody>
+</table>
+<p><strong>凡是带有inline属性的元素，都有文字特性</strong></p>
+<p>编程手段：反向编程，先定义功能，后添加html</p>
+<pre><code class="language-css">.red{background-color:red;}
+.green{background-color:green;}
+.gray{background-color:gray;}
+.size1{width:100px;height:100px;}
+.size2{width:200px;height:200px;}
+.size3{width:300px;height:300px;}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;red size1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;green size2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;gray size3&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>标签选择器更多是用于自定义标签</strong><br>
+<strong>通配符选择器更多是用于 设置padding和margin为0</strong></p>
+<h3 id="四-盒子模型">四、盒子模型</h3>
+<p>margin：外边距<br>
+border：边框<br>
+padding：内边距<br>
+content：内容区 width和height</p>
+<h3 id="五-定位层模型">五、定位（层模型）</h3>
+<p>position：relative（相对定位） | absolute（绝对定位）| fixed（固定定位）<br>
+z-index：默认0 值越大，离你越近<br>
+<strong>定位属性需与left、right、top、bottom配合使用</strong></p>
+<p><strong>当一个元素绝对定位（absolute）时，会脱离原来的层面跳到上一层进行定位</strong><br>
+<strong>相对于最近的有定位的父级进行定位，如果没有，相对于文档（html）进行定位</strong></p>
+<p><strong>当一个元素相对定位（relative）时，会保留原来的层面进行定位（灵魂出窍，但身体还在）</strong><br>
+<strong>相对于自己原来的位置进行定位</strong></p>
+<p><strong>企业开发当中，一般是用absolute定位，把relative当做标杆，即要定位的父级元素设置成relative</strong></p>
+<p><strong>元素居中的标准方法</strong></p>
+<pre><code class="language-css">div{
+	position:absolute | fixed;
+  left:50%;
+  top:50;
+  transform:translate(-50%,-50%);
+}
+</code></pre>
+<h3 id="六-两栏布局">六、两栏布局</h3>
+<pre><code class="language-html">&lt;div calss=&quot;right&quot;&gt;&lt;/div&gt;
+&lt;div calss=&quot;left&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.right{
+	position:absolute;
+  right0;
+  width:100px;
+	height:100px;
+  background-color:#fcc;
+  opacity:0.5;
+}
+.left{
+	margin-left:100px;
+  height:100px;
+  background-color:#123;
+}
+</code></pre>
+<h3 id="七-margin塌陷与margin合并">七、margin塌陷与margin合并</h3>
+<p>margin塌陷中，触发BFC需要在父元素中添加</p>
+<h3 id="八-浮动模型-floatleftright">八、浮动模型 float：left/right</h3>
+<p>float可以使元素排队，可以同时添加margin和padding<br>
+浮动元素会产生浮动流，所有产生浮动流的元素，块级元素看不到他们，产生了BFC的元素和文本类属性的元素（带有inline属性的元素）以及文本都能看到浮动元素。但不包括BFC中的position属性。浮动元素不保留原来位置</p>
+<p>父级里面有浮动的字级，需要展示边框把字级包住。（包裹浮动元素的方法---通过伪元素来实现）<br>
+伪元素：一个标签产生的时候，就会产生 ::before 和 ::after 两个伪元素<br>
+伪元素天生是行级元素，如果需要设置宽和高，需要改成块级元素或行级块元素。<br>
+<strong>凡是设置了 position:absloute 和 float:left/right 系统会自动转换成 display:inline-block</strong><br>
+<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1593780859404-e4afaec4-8965-4429-b96e-2cd0edc56db1.png#align=left&amp;display=inline&amp;height=526&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=526&amp;originWidth=745&amp;size=538172&amp;status=done&amp;style=none&amp;width=745" alt="image.png" loading="lazy"></p>
+<h3 id="九-清除浮动方法">九、清除浮动方法</h3>
+<pre><code class="language-html">&lt;style&gt;
+  .wrapper{border:1px solid black;}
+  .content{float:left;
+  				width:100px;
+    			height:100px;
+    			background-color:black;
+  }
+  .wrapper::after{
+  	content:&quot;&quot;;
+    clear:both;（清除浮动的元素必须是块元素）
+    display:block;
+  }
+&lt;/style&gt;
+
+&lt;body&gt;
+	&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>文字溢出处理（文字溢出容器，要打点展示）<br>
+处理单行文本：<br>
+white-space：nowrap<br>
+overflow：hidden<br>
+text-overflow：ellipsis<br>
+处理多行文本：</p>
+<p>企业级开发</p>
+<p>图片用来替代文字，当css没有的时候，文字也要出现<br>
+text-indent：缩进文字的宽度<br>
+white-space：nowrap 强制不换行<br>
+overflow：hidden</p>
+<p>行级元素只能嵌套行级元素<br>
+块级元素可以嵌套任何元素<br>
+<strong>特殊：p标签不能嵌套块级元素</strong><br>
+<strong>a标签不能嵌套a标签</strong><br>
+**</p>
+<h3 id="十-两边留白前提是父子级都是块级元素">十、两边留白（前提是父子级都是块级元素）</h3>
+<pre><code class="language-html">&lt;style&gt;
+  .wrapper{
+  background-color:#123;
+  height:30px;}
+  
+  .content{
+  	background-color:#0f0;
+    width:1200px;
+    height:30px;
+    margin:0 auto;
+  }
+&lt;/style&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+  	&lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p><strong>凡是带有inline的属性的标签都有文本的特点：写代码的时候，标签之间只要有文字分隔符，显示的时候就会有空隙</strong><br>
+<strong>文本类元素是底对齐，如果一个文本类元素里面有文字，那外面的文字就会与里面的文字底对齐</strong></p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/代码初始化/" class="post-title gt-a-link">
+                    代码初始化
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">温故而知新</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://bonjouryy.github.io//atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

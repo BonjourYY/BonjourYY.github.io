@@ -1,0 +1,467 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>JavaScript复习（一） | Gridea</title>
+
+<link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615726922379">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://bonjouryy.github.io//styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Gridea
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1615726922379" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    JavaScript复习（一）
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-03-13 ·
+                    </time>
+                    
+                        <a href="https://bonjouryy.github.io/tag/pkcCImmhP/" class="post-tags">
+                            # JavaScript
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/nLAdfjg1jO/" class="post-tags">
+                            # 复习
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="一-专业素养">一、专业素养</h1>
+<p>互联网历史第一个浏览器：Mosaic<br>
+浏览器组成：Shell部分 + 内核部分 （渲染引擎 JS引擎 其他模块）<br>
+2008年Google发布Chrome，Chrome采用优化后的JS引擎，代号“V8引擎”。</p>
+<p>人写的代码不能直接被计算机执行（计算机只认识“0和1”），所以需要经过翻译。翻译有两种方式：编译和解释</p>
+<p>编译：全部翻译完成，生产翻译文件，再执行翻译文件。<br>
+优点：快<br>
+不足：移植性不好，不能跨平台 C C++ Ruby</p>
+<p>解释：翻译一行，执行一行<br>
+优点：稍微慢<br>
+不足：跨平台 JavaScript php Python</p>
+<p>单线程与多线程（计算机的同步异步与生活相反）<br>
+单线程：一个执行体同一时间只能做一次事情 （同步）JavaScript是单线程的<br>
+多线程：一个执行体同时能干很多事情 （异步）</p>
+<h1 id="二-学习javascript">二、学习JavaScript</h1>
+<p>JavaScript特点：解释性、单线程<br>
+JS的三大部分：ECMAScript、DOM、BOM</p>
+<p>JS是如何执行的？采用轮转时间片的方式。<br>
+JS引擎把许多任务分成许多片段，依次传送执行，由于执行速度过快，所以看起来像是在一起执行的。</p>
+<h2 id="1引入js">（1）引入js</h2>
+<p>页面级引入：<head><script></script></head><br>
+外部引入：<script src=“xxx.js”></script> 一般写在body尾标签后面<br>
+如果既引入页面级，又引入外部。则外部优先级&gt;页面优先级</p>
+<h2 id="2基本语法">（2）基本语法</h2>
+<p>变量（variable），相当于一个筐，一个房间。<br>
+声明变量并赋值<br>
+var a；向系统申请一个房间（筐）---声明变量<br>
+a = 100；将100赋值到a里面去 ---变量赋值<br>
+var a = 100；---定义变量</p>
+<p>实际开发中，一般同时声明多个变量，并同时赋值。<br>
+var  a = 10，<br>
+b = 20，<br>
+c = 30，<br>
+d = 40，<br>
+e = 50；</p>
+<p>替换变量的值<br>
+var a = 10；<br>
+a =20；<br>
+变量名命名规则：1、变量名必须以英文字母、_、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">开</mi><mi mathvariant="normal">头</mi><mn>2</mn><mi mathvariant="normal">、</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">量</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">包</mi><mi mathvariant="normal">括</mi><mi mathvariant="normal">英</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">母</mi><msub><mi mathvariant="normal">、</mi><mi mathvariant="normal">、</mi></msub></mrow><annotation encoding="application/x-tex">开头
+2、变量名可以包括英文字母、_、</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">头</span><span class="mord">2</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">变</span><span class="mord cjk_fallback">量</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">包</span><span class="mord cjk_fallback">括</span><span class="mord cjk_fallback">英</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">母</span><span class="mord"><span class="mord cjk_fallback">、</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.15em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord cjk_fallback mtight">、</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>、数字<br>
+3、不可以用系统的关键字，保留字作为变量名<br>
+关键字：break、case、catch、continue、default、delete、do、else、finally、for、function、if、in、instanceof、new、return、switch、this、throw、try、typeof、var、void、while、with<br>
+保留字：abstract、boolean、byte、char、class、const、debugger、double、enum、export、extends、fimal、float、goto、implements、import、int、interface、long、mative、package、private、protected、public、short、static、super、synchronized、throws、transient、volatile<br>
+变量名网站：<a href="https://unbug.github.io/codelf/">https://unbug.github.io/codelf/</a></p>
+<p>书写格式要规范，“=”“+”“/”&quot;-&quot;两边都应该有一个空格<br>
+语句后面要用分号结束“；”</p>
+<pre><code class="language-javascript">//特例
+function test(){}
+for (){}
+if(){}
+</code></pre>
+<p>js语法错误会引发后续代码终止，但不会影响其他js代码块<br>
+错误分成两种<br>
+1、低级错误（语法解析错误）<br>
+2、逻辑错误（标准错误，情有可原）</p>
+<pre><code class="language-javascript">&lt;script&gt;
+  	var a = 10;
+		document.write(c);
+  &lt;/script&gt;
+&lt;script&gt;
+  	var b = 20;
+		document.write(b);
+  &lt;/script&gt;
+</code></pre>
+<h2 id="3数据类型由值决定类型">（3）数据类型——由值决定类型</h2>
+<p>数据类型分为 原始值 和 引用值</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原始值</th>
+<th style="text-align:center">Number</th>
+<th style="text-align:center">String</th>
+<th style="text-align:center">Boolean</th>
+<th style="text-align:center">underfined</th>
+<th style="text-align:center">null</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">数字</td>
+<td style="text-align:center">字符串</td>
+<td style="text-align:center">逻辑值（true/false）</td>
+<td style="text-align:center">变量未赋值</td>
+<td style="text-align:center">占位</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">引用值</td>
+<td style="text-align:center">arry</td>
+<td style="text-align:center">Object</td>
+<td style="text-align:center">function</td>
+<td style="text-align:center">...date</td>
+<td style="text-align:center">RegExp</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">数组</td>
+<td style="text-align:center">对象</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>申请变量赋值时，如果变量是原始值，那么系统记录的是值本身。如果变量是引用值，那么系统记录的是值的地址。<br>
+原始值赋值到原始值，拷贝的是值，所以改变原来的原始值，现在的不会改变。<br>
+引用值赋值到引用值，拷贝的是地址，所以改变原来的引用值，现在的也会跟着改变。</p>
+<h2 id="4运算操作符">（4）运算操作符</h2>
+<p>+： （1）数字运算<br>
+（2）字符串连接<br>
+注意：任何数据类型加字符串都等于字符串<br>
+减：-<br>
+乘：*<br>
+除：/<br>
+取余：%<br>
+赋值：=<br>
+括号：（）<br>
+加加：++（自身加1再赋值给自身）<br>
+减减：--（自身减1再赋值给自身）</p>
+<pre><code class="language-javascript">var a = 10;
+document.write(a++); 先输出a，再加加
+document.write(a);
+document.write(++a); 先加加，再输出a
+
+var a = 10;
+var b = ++a - 1 + a++;
+document.write(b + &quot; &quot; + a);
+
+var a = 10;
+a += 10; a加10，然后赋值给自身，相当于 a = a + 10;
+
+var a = 1：
+var b = a++ + 1：
+document.write(a);
+document.write(b); b=2 因为a++ 要先等这条语句执行完才会+1
+
+var a = 1；
+var b = a-- + --a;
+document.write(b); b=0 因为看到了--a,所以要先算--a这个运算，然后再算其他的
+doucment.write(a); a=-1
+
+var a = 1;
+var b = --a + --a;
+document.write(b);
+
+++ 放后面，等整条语句执行完，在+1的运算
+++ 放前面，先执行+1的那个运算，在执行整条语句
+其他 -- 同理
+</code></pre>
+<h2 id="5比较运算符">（5）比较运算符</h2>
+<p>大于：&gt;<br>
+小于：&lt;<br>
+等于等于：== 比较是否相等<br>
+大于等于：&gt;=<br>
+小于等于：&lt;=<br>
+叹号等于：！= 比较是否不相等<br>
+NaN不等于任何数，包括自己<br>
+比较结果boolean值，只能是 true（1） 或 false（0）<br>
+如果比较的是字符串，则比较的是字符串的ASCII顺序<br>
+<img src="https://cdn.nlark.com/yuque/0/2020/png/1353789/1594739726523-632acf54-b394-47b8-af85-1ef958937caf.png#align=left&amp;display=inline&amp;height=633&amp;margin=%5Bobject%20Object%5D&amp;originHeight=633&amp;originWidth=972&amp;size=0&amp;status=done&amp;style=none&amp;width=972" alt="" loading="lazy"></p>
+<h2 id="6逻辑运算符">（6）逻辑运算符</h2>
+<p>与：&amp;&amp; 找假的表达式，并返回表达式的值，如果都为真，则返回最后表达式的值（返回的是表达式的值，并不是boolean值）<br>
+或：|| 找真的表达式，并返回表达式的值，如果都为假，则返回最后表达式的值（返回的是表达式的值，并不是boolean值）<br>
+非（取反）：！  先变成boolean值，然后取反。<br>
+被认为是false的值：underfined，null，NaN，“”（空字符串），0，false</p>
+<h2 id="7条件语句-if-else">（7）条件语句---if else</h2>
+<pre><code class="language-javascript">if(条件){语句}
+先把条件转换成boolean值，如果为true，则执行，为false则不执行。
+
+if(条件){语句}else if(){} 满足条件：条件具有互斥性
+
+if else 语句与 短路语句 类似
+if(1 &gt; 2){
+	document.write(&quot;a&quot;);
+}
+===&gt; 
+1 &gt; 2 &amp;&amp; document.write(&quot;a&quot;);
+</code></pre>
+<h2 id="8循环语句-for循环">（8）循环语句---for循环</h2>
+<pre><code class="language-javascript">for 循环
+for(var i = 0; i &lt; 10; i++) 
+{
+  document.write(i); //循环体
+}
+
+另一种写法
+var i = 0;
+for ( ; i &lt; 10 ; )
+  {
+    document.write(i);
+    i++;
+  }
+
+执行顺序：
+1、var i = 0 //定义变量
+2、if(i &lt; 10){document.write(i);} //判断
+3、i++  --&gt;  i=1
+4、if(i &lt; 10){document.write(i);}
+5、i++
+
+先执行一遍（1）
+判断（2）执行语句
+执行（3）
+注意：i++ 永远都是循环的最后一步。
+</code></pre>
+<h2 id="9while循环">（9）while循环</h2>
+<pre><code class="language-javascript">while 循环就是 for 循环的简化版
+while (i &lt; 10)
+{
+  document.write(i);
+  i++;
+}
+</code></pre>
+<h2 id="10do-while循环">（10）do while循环</h2>
+<pre><code class="language-javascript">do while 循环
+不管满不满足，先执行一次，在判断
+var i = 0;
+do
+{
+  document.write(&quot;a&quot;)
+  i++;
+}
+while(i &lt; 10)
+</code></pre>
+<h2 id="11switch-case语句">（11）switch case语句</h2>
+<pre><code class="language-javascript">var n = &quot;a&quot;/2/true;
+switch (n)
+{
+  case &quot;a&quot; : console.log(a);break;
+  case 2 : concole.log(b);break;
+  case true ：console.log(c);break;
+}
+注意：switch里面的写的是条件，case后面跟的是值。只要判断n的值等于&quot;a&quot;/2/true，就执行后面的代码。
+			如果不增加break，那面就会连带后面的语句一起输入，比如n=2时，就会打印出b和c。
+      break的作用：终止循环，需放在循环体里面。
+      continue：终止本次循环，进行下一次循环。
+</code></pre>
+<p>数组<br>
+声明数组：var arr = [1,2,3,&quot;fan&quot;,underfined];<br>
+数组的第一位是0开始的，因此取出数组里第一位的值 arr[0]; 最后一位的值 arr[arr.length - 1];<br>
+遍历数组通用方法</p>
+<pre><code class="language-javascript">for （var i = 0; i &lt; arr.length; i++）
+{
+	console.log(arr[i]);
+}
+</code></pre>
+<p>对象<br>
+声明对象 var obj = {name:&quot;fan&quot;, age:20}; 中间用逗号，最后用分号<br>
+取值：console.log(obj.name);<br>
+赋值：obj.name=&quot;deng&quot;;</p>
+<p>typeof()：告知你，数据是何种类型。</p>
+<pre><code class="language-javascript">var num = true;
+console.log(typeof(num));
+</code></pre>
+<p>typeof()可以返回的值：number string boolean object underfined function</p>
+<p>类型转换<br>
+1、显示类型转换<br>
+Number()：将括号里的值转换为数值类型，不能转的用NaN代替。最后的都是数值类型。<br>
+parseInt()：转换成整数。没有小数点。不能转的用NaN代替。</p>
+<pre><code class="language-javascript">var demo = &quot;b&quot;;
+var num = parseInt(demo); //把b转换成整数 NaN
+var num = parseInt(demo,16); //把b当做16进制转换成10进制
+</code></pre>
+<p>parseFloat()：转换成浮点类型，不能转的用NaN代替。<br>
+toString()  ===&gt;   demo.toString  underfined和null不能用toString</p>
+<pre><code class="language-javascript">var demo = 1010101010;
+var num = demo.toString(16); //把demo转换成16进制。
+</code></pre>
+<pre><code class="language-javascript">10000 转换成 16 进制
+先由2进制转成10进制，在转成16进制
+var num = 10000;
+var test = parseInt(num,2);
+console.log(test.toString(16));
+</code></pre>
+<p>String()：转换成字符串<br>
+Boolean()：转换成布尔类型</p>
+<p>2、隐式类型转换<br>
+isNaN(&quot;abc&quot;)    判断参数是否是NaN   Number(&quot;abc&quot;) ---&gt; NaN<br>
+++/-- +/-     ---&gt;  Number()</p>
+<pre><code class="language-javascript">var a = &quot;abc&quot;;
+a++; 先把a转换为number形式再加加 --&gt;  Number(a)
+a--; 同上
++a; 调用的也是Number 正号
+-a; 调用的也是Number 负号
+</code></pre>
+<p>+(&quot;加号&quot;)     ---&gt;    String()<br>
+-*/%      ---&gt;    Number()<br>
+&amp;&amp; || !    ---&gt;   Boolean()<br>
+&lt; &gt; &lt;= &gt;=    ---&gt;    Number()<br>
+== !=</p>
+<p>3.不发生类型转换<br>
+===    ！==</p>
+<p>NaN不等于任何数，包括自己。</p>
+<pre><code class="language-javascript">当变量没有被定义在控制台输出时，有且仅有一种情况不会报错。
+console.log(typeof(a));
+console.log(typeof(typeof(a)));   //返回的是String
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/JavaScript复习（二）/" class="post-title gt-a-link">
+                    JavaScript复习（二）
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">温故而知新</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://bonjouryy.github.io//atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

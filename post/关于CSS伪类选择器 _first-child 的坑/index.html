@@ -1,10 +1,10 @@
-<html lang="zh">
+<html>
 <head>
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>关于 - Gridea</title>
+<title>关于CSS伪类选择器 _first-child 的坑 | Gridea</title>
 
 <link rel="shortcut icon" href="https://bonjouryy.github.io//favicon.ico?v=1615726922379">
 
@@ -25,7 +25,7 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
@@ -86,18 +86,70 @@
 </nav>
 
     <div class="post-container">
-        <div class="post-detail">
+        <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
-                <div class="post-content">
+                <h2 class="post-title">
+                    关于CSS伪类选择器 _first-child 的坑
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-03-11 ·
+                    </time>
                     
+                        <a href="https://bonjouryy.github.io/tag/3RZqkOBes/" class="post-tags">
+                            # 伪类
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/aWjfLS7pY/" class="post-tags">
+                            # css
+                        </a>
+                    
+                        <a href="https://bonjouryy.github.io/tag/y2_j6dB9M1/" class="post-tags">
+                            # 选择器
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>p:first-child 寻找p元素的父元素下面的第一个p元素<br>
+首先，寻找到第一个元素时，判断第一个元素是不是p元素，如果是，则改变，反之不改变。</p>
+<p>CSS代码</p>
+<pre><code class="language-css">p{
+	font-size:100px;
+  color:orange;
+}
+</code></pre>
+<p>HTML代码</p>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;p&gt;123&lt;/p&gt; //这种就会正常渲染
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;span&gt;123&lt;/span&gt;
+  &lt;p&gt;123&lt;/p&gt; //这种就不会正常渲染
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>注意 :nth-child() 同理</p>
+
                 </div>
             </article>
         </div>
-        <br>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://bonjouryy.github.io/post/CSS自定义属性(CSS变量)/" class="post-title gt-a-link">
+                    css自定义属性(css变量)
+                </a>
+            </div>
         
 
         
 
+        
+
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">温故而知新</div>
